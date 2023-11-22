@@ -1,0 +1,17 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.text-white {
+  color: white;
+}
+
+.p-4 {
+  padding: 2rem;
+}
