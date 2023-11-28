@@ -14,6 +14,7 @@
   position: relative;
 }
 
+
 .form-box {
   width: 90%;
   max-width: 450px;
@@ -143,4 +144,45 @@ a {
 .btn-field button .disable {
   background: #eaeaea;
   color: #555;
+}
+
+.navigation {
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  position: relative; /* atau position: static; */
+  width: 100%;
+  /*/top:470px;/*/
+}
+
+.navigation-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+  cursor: pointer; /* Menjadikan kursor menjadi tangan */
+}
+
+.navigation-icon i {
+  font-size: 24px;
+}
+
+.icon-label {
+  color: #000; /* Warna label */
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold; /* Teks tebal */
+}
+
+/* Responsivitas */
+@media only screen and (max-width: 768px) {
+  .navigation-icon {
+    margin: 0 10px; /* Mengurangi margin pada layar kecil */
+  }
 }

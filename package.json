@@ -27,6 +27,7 @@
     "webpack-merge": "^5.10.0"
   },
   "dependencies": {
-    "@fontsource/poppins": "^5.0.8"
+    "@fontsource/poppins": "^5.0.8",
+    "feather-icons": "^4.29.1"
   }
 }
