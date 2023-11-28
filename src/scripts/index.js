@@ -1,4 +1,5 @@
 import App from './App';
+import '../styles/login&register/style.css';
 import '../styles/index.css';
 
 const root = document.getElementById('root');
