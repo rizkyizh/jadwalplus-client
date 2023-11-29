@@ -6,28 +6,32 @@ class Navigation extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <div class="navigation">
-      <div class="navigation-icons">
-        <div class="navigation-icon" id="add-icon">
-          <i class="fas fa-home"></i>
-          <span class="icon-label">Home</span>
+      <div class="navigation">
+        <div class="navigation-icons">
+          <div class="navigation-icon" id="add-icon">
+            <i data-feather="home"></i>
+            <span class="icon-label">Home</span>
+          </div>
+          <div class="navigation-icon" id="add-book-icon"> <!-- Mengganti ID dan Menambahkan Kode untuk Buku -->
+          <i data-feather="file-plus"></i>
+          <span class="icon-label">Add</span>
         </div>
-        <div class="navigation-icon" id="sign-out-icon">
-          <i class="fas fa-sign-out-alt"></i>
-          <span class="icon-label">Sign Out</span>
-        </div>
-        <div class="navigation-icon" id="About">
-        <i class="fa-solid fa-address-card"></i>
-          <span class="icon-label">About</span>
+          <!-- Menambahkan ikon "user" -->
+          <div class="navigation-icon" id="About">
+            <i data-feather="user"></i>
+            <span class="icon-label">About</span>
+          </div>
         </div>
       </div>
-    </div>
     `;
+    // Panggil feather.replace() setelah elemen dirender
+    // eslint-disable-next-line no-undef
+    feather.replace();
   }
 
   addEventListeners() {
-    document.getElementById('add-icon').addEventListener('click', () => this.navigateToPage('/#'));
-    document.getElementById('sign-out-icon').addEventListener('click', () => this.navigateToPage('/#/beranda'));
+    document.getElementById('add-icon').addEventListener('click', () => this.navigateToPage('/'));
+    document.getElementById('add-book-icon').addEventListener('click', () => this.navigateToPage('/#/register'));
     document.getElementById('About').addEventListener('click', () => this.navigateToPage('/#/login'));
   }
 

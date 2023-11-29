@@ -150,10 +150,10 @@ a {
   background-color: white;
   color: black;
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
   position: relative; /* atau position: static; */
   width: 100%;
-  /*/top:470px;/*/
+  top:476px;
 }
 
 .navigation-icons {

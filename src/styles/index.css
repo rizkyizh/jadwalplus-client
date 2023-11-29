@@ -113,9 +113,6 @@ button:active {
   transform: translateX(-50%);
   z-index: 1; 
 }
-
-
-
 .logo {
   font-family: 'Poppins', sans-serif;
   display: flex;
@@ -168,5 +165,29 @@ footer {
   position: relative; /* atau position: static; */
   width: 100%;
   top:600px;
+}
+
+/*image beranda*/
+.body-bg-image {
+  background-image: url('../public/image/book.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+
+}
+
+.auth-user {
+  margin-left: 15px;
+  background-color: black;
+  padding: 8px 15px;
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer; 
 }
 

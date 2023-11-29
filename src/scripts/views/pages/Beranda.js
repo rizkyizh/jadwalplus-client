@@ -1,8 +1,10 @@
-import '../components/Header';
+import '../components/Navbar';
 import '../components/Navigation';
+import '../components/HeroBeranda';
 
-const header = document.createElement('header-app');
+const navbar = document.createElement('navbar-app');
 const navigation = document.createElement('navigation-app');
+const heroberanda = document.createElement('heroberanda-app');
 
 class Beranda extends HTMLElement {
   connectedCallback() {
@@ -12,7 +14,7 @@ class Beranda extends HTMLElement {
   render() {
     // eslint-disable-next-line no-unused-expressions
     this.firstChild && this.removeChild(this.firstChild);
-    this.append(header, navigation);
+    this.append(navbar, heroberanda, navigation);
     this.classList.add('min-height-100');
   }
 }
