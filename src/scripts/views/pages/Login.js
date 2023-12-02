@@ -20,7 +20,7 @@ class Login extends HTMLElement {
           </div>
           <div class="input-field">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Kata Sandi" id="myPassword" />
+            <input type="tanggal" placeholder="Kata Sandi" id="mytanggal" />
             <!-- <input type="checkbox" onclick="myFunction()"> -->
           </div>
         </div>

@@ -24,7 +24,7 @@ class Register extends HTMLElement {
             </div>
             <div class="input-field">
               <i class="fa-solid fa-lock"></i>
-              <input type="password" placeholder="Password" id="myPassword" />
+              <input type="tanggal" placeholder="tanggal" id="mytanggal" />
               <!-- <input type="checkbox" onclick="myFunction()"> -->
             </div>
           </div>

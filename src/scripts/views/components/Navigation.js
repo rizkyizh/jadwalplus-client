@@ -30,9 +30,9 @@ class Navigation extends HTMLElement {
   }
 
   addEventListeners() {
-    document.getElementById('add-icon').addEventListener('click', () => this.navigateToPage('/'));
-    document.getElementById('add-book-icon').addEventListener('click', () => this.navigateToPage('/#/register'));
-    document.getElementById('About').addEventListener('click', () => this.navigateToPage('/#/login'));
+    document.getElementById('add-icon').addEventListener('click', () => this.navigateToPage('/#/beranda'));
+    document.getElementById('add-book-icon').addEventListener('click', () => this.navigateToPage('/#/add'));
+    document.getElementById('About').addEventListener('click', () => this.navigateToPage('/#/about'));
   }
 
   // eslint-disable-next-line class-methods-use-this

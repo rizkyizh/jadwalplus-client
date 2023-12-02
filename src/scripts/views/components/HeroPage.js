@@ -1,4 +1,4 @@
-class HeroBeranda extends HTMLElement {
+class HeroPage extends HTMLElement {
   connectedCallback() {
     this.render();
   }
@@ -10,4 +10,4 @@ class HeroBeranda extends HTMLElement {
   }
 }
 
-customElements.define('heroberanda-app', HeroBeranda);
+customElements.define('heropage-app', HeroPage);
