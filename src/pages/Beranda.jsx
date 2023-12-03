@@ -24,11 +24,31 @@ const Beranda = () => {
       createdAt: '30 Desesmber 2030',
       finished: true,
     },
+    {
+      id: 'jsndjna',
+      schedule: 'renang',
+      dateTime: '30 Desesmber 2030',
+      createdAt: '30 Desesmber 2030',
+      finished: true,
+    },
+    {
+      id: 'jsnaajnd',
+      schedule: 'renang',
+      dateTime: '30 Desesmber 2030',
+      createdAt: '30 Desesmber 2030',
+      finished: true,
+    },
+    {
+      id: 'jssssdjnd',
+      schedule: 'renang',
+      dateTime: '30 Desesmber 2030',
+      createdAt: '30 Desesmber 2030',
+      finished: true,
+    },
   ]);
 
   return (
     <div className="bgimage">
-      <h2>Halaman Beranda setelah login</h2>
       <ScheduleList schedules={schedules} />
     </div>
   );

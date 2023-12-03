@@ -50,9 +50,9 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 80vh; 
+  min-height: 100vh; 
 }
 
 .margin-bottom-4rem {
-  margin-bottom: 4rem;
+  margin-bottom: 10rem;
 }

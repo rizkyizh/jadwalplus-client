@@ -150,7 +150,6 @@ a {
   color: black;
   text-align: center;
   padding: 5px 0;
-  position: relative; /* atau position: static; */
   width: 100%;
 }
 
