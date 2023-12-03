@@ -1,0 +1,56 @@
+.text-container {
+  position: absolute;
+  left: 30%;
+  top: 330px;
+  transform: translate(-50%, -50%);
+}
+.text-container p:nth-child(1) {
+  font-family: 'Poppins', sans-serif;
+  color: #403e3e;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.text-container p:nth-child(2) {
+  font-family: 'Poppins', sans-serif;
+  color: #403e3e;
+  font-size: 17px;
+  margin-top: 10px;
+  line-height: 30px;
+}
+
+.text-container p {
+  line-height: 1.5;
+  margin: 15px 0px;
+}
+
+
+.text-container button {
+  width: 130px;
+  height: 42px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  outline: none;
+  margin: 0px 10px;
+}
+
+.hire-btn {
+  background-color: #0b0b0b;
+  color: #ffffff;
+  border: none;
+}
+
+button:active {
+  transform: scale(1.1);
+}
+
+.model {
+  height: 400px;
+  position: absolute;
+  bottom:15%; 
+  left: 70%; 
+  transform: translateX(-50%);
+  z-index: 1; 
+}

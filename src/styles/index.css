@@ -1,175 +1,50 @@
-
-/**/
-/* @import "~@fortawesome/fontawesome-free/css/all.css"; */
-@import "@fontsource/poppins";
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: 0;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins';
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-section {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  background-color: #FFFFFF;
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-  padding: 0px 5%;
-}
-
-nav ul {
-  display: flex;
-}
-
-nav ul li a {
-  margin: 5px;
-  font-family: 'Poppins', sans-serif;
-  color: black;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.nav-item {
-  display: inline-block;
-  padding: 8px;
-}
-
-.active {
-  color: #2d2a2a;
-  font-weight: bold;
-}
-.text-container {
-  position: absolute;
-  left: 30%;
-  top: 330px;
-  transform: translate(-50%, -50%);
-}
-.text-container p:nth-child(1) {
-  font-family: 'Poppins', sans-serif;
-  color: #403e3e;
-  font-size: 30px;
-  line-height: 30px;
-}
-
-.text-container p:nth-child(2) {
-  font-family: 'Poppins', sans-serif;
-  color: #403e3e;
-  font-size: 17px;
-  margin-top: 10px;
-  line-height: 30px;
-}
-
-.text-container p {
-  line-height: 1.5;
-  margin: 15px 0px;
-}
-
-
-.text-container button {
-  width: 130px;
-  height: 42px;
-  border-radius: 10px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  outline: none;
-  margin: 0px 10px;
-}
-
-.hire-btn {
-  background-color: #0b0b0b;
-  color: #ffffff;
-  border: none;
-}
-
-button:active {
-  transform: scale(1.1);
-}
-
-.model {
-  height: 400px;
-  position: absolute;
-  bottom:15%; 
-  left: 70%; 
-  transform: translateX(-50%);
-  z-index: 1; 
-}
-.logo {
-  font-family: 'Poppins', sans-serif;
-  display: flex;
-  align-items: center;
-  color: #000000;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.logo-image {
-  margin-right: 10px;
-  max-height: 40px;
-  max-width: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.auth-box {
-  margin-left: 15px;
-  background-color: #000;
-  padding: 8px 15px;
-  border-radius: 5px;
-}
-
-.login-box {
-  background-color: white;
-  border: 2px solid #000;
-  color: #ffff00;
-}
-
-.auth-link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.auth-aja {
-  color: black;
-  text-decoration: none;
-}
-.min-height-100{
+.min-height-100 {
   min-height: 100vh;
-  display: block;
 }
 
-footer {
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  padding: 2ch 0;
-  position: relative; 
+.icon-navigation-action {
+  font-size: 2rem;
+}
+
+.navigation-bottom {
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  top:600px;
 }
 
-/*image beranda*/
+.reset-link {
+  color: unset;
+  text-decoration: none;
+}
+
+.reset-button {
+  border: none;
+  outline: 0;
+  background-color: unset;
+  cursor: pointer;
+}
+
+.container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap-icon {
+  display: flex;
+  flex-direction: column;
+}
+
 .bgimage {
   background-image: url('../public/image/book.jpg');
   background-size: cover;
@@ -177,195 +52,7 @@ footer {
   background-repeat: no-repeat;
   height: 80vh; 
 }
-.auth-user {
-  margin-left: 15px;
-  background-color: black;
-  padding: 8px 15px;
-  border-radius: 50%; 
-  width: 40px; 
-  height: 40px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  cursor: pointer; 
-}
 
-/**/
-.site-name {
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  right:270px;
-  color: black; 
-  margin-bottom: 10px; 
-  position: relative;
-  top: -540px; 
-
-}
-
-
-.user-info-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  top: 50px;
-}
-
-.red-box {
-  width: 60%;
-  height: 380px;
-  background-color: #E0E0E0;
-  margin: 10% auto;
-  position: absolute;
-  top: -1%;
-  z-index: 1;
-  border: 1px solid #B7B1B1;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); 
-}
-
-.input-container {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.input-container input {
-  width: 80%;
-  padding: 8px;
-  margin: 0 auto;
-  margin-bottom: -10px;
-  background-color: white;
-  border: 1px solid #000; 
-  border-radius: 5px;
-}
-.input-container textarea {
-  width: 80%;
-  padding: 60px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  background-color: white;
-  border: 1px solid #000; 
-  border-radius: 5px;
-  resize: vertical; 
-  line-height: 1.5; 
-  text-align: center; 
-}
-
-.button-container {
-  text-align: center;
-}
-
-.save-button {
-  background-color: #0b0b0b;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 8px 36%;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.kotak-jadwal-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.kotak-jadwal {
-  background-color: #fff;
-  border: 1px solid #000;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/*teks*/
-
-h2 {
-  color: #112049;
-  font-size: 30px;
-  line-height: 30px;
-  margin-top: 40px;
-  text-align: center;
-  margin-bottom: 80px;
-  position: relative;
-}
-
-h2::after {
-  content: ""; 
-  display: block; 
-  border-bottom: 4px solid#112049;
-  width: 500px;
-  position: absolute; 
-  margin-top: -30px; 
-  left: 50%; 
-  transform: translateX(-50%);
-  padding-bottom: 50px; 
-}
-
-h3 {
-  position: relative;
-  color:#112049;
-  margin-left: 200px;
-}
-
-h3::before {
-  content: attr(data-section-counter); 
-  display: inline-block;
-  width: 40px; 
-  height: 40px;
-  background-color: 
-  #1F3C88; 
-  color: white;
-  font-size: 24px; 
-  line-height: 40px; 
-  text-align: center;
-  border-radius: 50%; 
-  margin-right: 15px; 
-  position: absolute;
-  left: -60px; 
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-h3[data-section-counter="1"] {
-  margin-bottom: px; 
-}
-
-p1 {
-  font-family: 'Quicksand', sans-serif;
-  line-height: 1.5;
-  margin: 15px 0px; 
-  margin-left: 200px;
-  color: #000000; 
-  margin-top: 1px;
-}
-
-
-/* simpan */
-.kotak-jadwal1 {
-  background-color: #fff;
-  border: 1px solid #000;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 40%;
-  margin: 10px auto;
-  margin-top: -30%;
-  text-align: center; 
-  margin-bottom: 150px; 
-}
-
-.jadwal-info {
-  text-align: center;
-}
-
-.jadwal-info p {
-  color: red;
-  text-align: left; 
-  letter-spacing: 1px; 
+.margin-bottom-4rem {
+  margin-bottom: 4rem;
 }
