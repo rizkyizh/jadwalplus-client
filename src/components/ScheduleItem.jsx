@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { FaCheckCircle, FaTrashAlt, FaEdit } from 'react-icons/fa';
-import { finishedScheduleActionCreator, deleteScheduleActionCreator } from '../states/schedules/action';
+import { finishedScheduleActionCreator, deleteScheduleActionCreator, editScheduleActionCreator } from '../states/schedules/action';
 import showFormattedDate from '../utils/showFormattedDate';
 
 const ScheduleItem = ({ schedule }) => {
@@ -10,6 +10,10 @@ const ScheduleItem = ({ schedule }) => {
 
   const finishedSchedule = (id) => {
     dispatch(finishedScheduleActionCreator(id));
+  };
+
+  const editSchedule = (id) => {
+    dispatch(editScheduleActionCreator(id));
   };
 
   const deleteSchedule = (id) => {
@@ -34,7 +38,7 @@ const ScheduleItem = ({ schedule }) => {
         <p>{schedule.finished ? 'selesai' : 'belum selesai'}</p>
       </div>
       <div className="container-check">
-        <button type="button" aria-label="edit-btn">
+        <button type="button" aria-label="edit-btn" onClick={() => editSchedule(schedule.id)}>
           <FaEdit className="fa-icon-size" />
         </button>
         <button type="button" aria-label="delete-btn" onClick={() => deleteSchedule(schedule.id)}>

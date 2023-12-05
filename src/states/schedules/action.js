@@ -3,6 +3,7 @@ const ActionType = {
   SCHEDULES_RECEIVE: 'SCHEDULES_RECEIVE',
   SCHEDULES_FINISHED: 'SCHEDULES_FINISHED',
   SCHEDULES_DELETE: 'SCHEDULES_DELETE',
+  SCHEDULES_EDIT: 'SCHEDULES_EDIT',
   SCHEDULES_UPDATE: 'SCHEDULES_UPDATE',
 };
 
@@ -18,6 +19,15 @@ const receiveSchedulesActionCreator = (schedules) => {
 const addScheduleActionCreator = (schedule) => {
   return {
     type: ActionType.SCHEDULES_ADD,
+    payload: {
+      schedule,
+    },
+  };
+};
+
+const editScheduleActionCreator = (schedule) => {
+  return {
+    type: ActionType.SCHEDULES_EDIT,
     payload: {
       schedule,
     },
@@ -59,5 +69,6 @@ export {
   finishedScheduleActionCreator,
   deleteScheduleActionCreator,
   updateScheduleActionCreator,
+  editScheduleActionCreator,
   ActionType,
 };

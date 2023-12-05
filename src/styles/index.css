@@ -76,3 +76,10 @@ body {
 .bg-gray {
   color: #aaa;
 }
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 3;
+}

@@ -12,6 +12,7 @@ import NavigationBottom from './components/NavigationBottom';
 import AddSchedulePage from './pages/AddSchedulePage';
 import ArsipPage from './pages/ArsipPage';
 import JadwalPage from './pages/JadwalPage';
+import EditPage from './pages/EditPage';
 
 const App = () => {
   // false --> halaman sebelum login
@@ -22,7 +23,7 @@ const App = () => {
 
   if (authUser === false) {
     return (
-      <div>
+      <div className="min-height-100">
         { path !== '/register' && path !== '/login' && <Header /> }
         <main>
           <Routes>
@@ -45,6 +46,7 @@ const App = () => {
         <Route path="/" element={<Beranda />} />
         <Route path="/schedules/arsip" element={<ArsipPage />} />
         <Route path="/schedule/add" element={<AddSchedulePage />} />
+        <Route path="/schedule/edit" element={<EditPage />} />
       </Routes>
       <NavigationBottom />
     </div>

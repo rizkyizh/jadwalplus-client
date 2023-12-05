@@ -4,7 +4,7 @@ import './styles/header.css';
 
 const Header = () => {
   return (
-    <header>
+    <header className="sticky-top">
       <nav>
         <div className="logo">
           <img src="/image/logo.png" alt="Logo" className="logo-image" />

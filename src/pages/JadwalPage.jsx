@@ -15,35 +15,28 @@ const JadwalPage = () => {
           <div className="center-box" />
           <h4 className="about-heading">JadwalPlus</h4>
           <p className="about-text">
-            JadwalPlus mengajak kepada pengguna untuk mengatur jadwal lebih efisien,
-            {' '}
-            <br />
-            memenejemen waktu lebih mudah lagi. Tujuan utama dari JadwalPlus sendiri
-            {' '}
-            <br />
-            yaitu untuk mentracking aktivitas sehari-hari, terutama dalam era modern
-            {' '}
-            <br />
-            di mana kehidupan kita semakin sibuk dan kompleks.
-            {' '}
-            <br />
+            JadwalPlus adalah sebuah jadwal dimana pengguna  mengelola jadwal
+            dengan baik,mengorganisir dan mengatur aktivitas belajar.
+            Dalam konteks
+            yang lebih umum, JadwalPlus membantu orang
+            untuk mengelola waktu mereka secara efisien dan efektif.
           </p>
           <div>
             <h2>Keuntungan Menggunakan Aplikasi JadwalPlus</h2>
             <h3 data-section-counter="1">Efesian Waktu</h3>
-            <p1>
+            <p1 className="text1">
               Dengan aplikasi JadwalPlus, Anda dapat mengatur,
               dan memantau kegiatan dengan lebih efisien.
             </p1>
-            <h3 data-section-counter="2">Dengan Bersih, Kita Dapat Pahala</h3>
+            <h3 data-section-counter="2">Manajamenen Stress</h3>
             <p1>
               Dengan memiliki JadwalPlus dapat mengurangi stres karena tahu apa yang harus dilakukan
               dan kapan harus melakukannya.
             </p1>
-            <h3 data-section-counter="3">Dengan Bersih, Kita Dapat Pahala</h3>
+            <h3 data-section-counter="3">Melacak Kemajuan Belajar</h3>
             <p1>
-              Dengan aplikasi JadwalPlus,Dapat melacak kemajuan target belajar.
-              Ini membantu pengguna untuk tetap fokus dan termotivasi.
+              Dengan aplikasi JadwalPlus,Dapat melacak kemajuan target belajar.Ini membantu pengguna
+              untuk tetap fokus dan termotivasi.
             </p1>
           </div>
         </div>

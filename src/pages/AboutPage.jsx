@@ -16,17 +16,9 @@ const AboutPage = () => {
           <h4 className="about-heading">JadwalPlus</h4>
           <p className="about-text">
             JadwalPlus mengajak kepada pengguna untuk mengatur jadwal lebih efisien,
-            {' '}
-            <br />
             memenejemen waktu lebih mudah lagi. Tujuan utama dari JadwalPlus sendiri
-            {' '}
-            <br />
             yaitu untuk mentracking aktivitas sehari-hari, terutama dalam era modern
-            {' '}
-            <br />
             di mana kehidupan kita semakin sibuk dan kompleks.
-            {' '}
-            <br />
           </p>
         </div>
       </div>
@@ -64,9 +56,15 @@ const AboutPage = () => {
               <p>(Front end & UI/UX)</p>
             </div>
             <div className="social-icons">
-              <FaInstagram />
-              <FaGithub />
-              <FaLinkedin />
+              <a href="https://www.instagram.com/munawar_amin2/" target="_blank" rel="noopener noreferrer">
+                <FaInstagram />
+              </a>
+              <a href="https://github.com/RestuMS" target="_blank" rel="noopener noreferrer">
+                <FaGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/restu-muhammad-saputro-402888299/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
             </div>
           </div>
           {/* Kotak 3 */}
@@ -78,8 +76,12 @@ const AboutPage = () => {
             </div>
             <div className="social-icons">
               <FaInstagram />
-              <FaGithub />
-              <FaLinkedin />
+              <a href="https://github.com/adelintang" target="_blank" rel="noopener noreferrer">
+                <FaGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/ade-lintang-permono-2b4a0b29a/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
             </div>
           </div>
           {/* Kotak 4 */}
@@ -91,8 +93,12 @@ const AboutPage = () => {
             </div>
             <div className="social-icons">
               <FaInstagram />
-              <FaGithub />
-              <FaLinkedin />
+              <a href="https://github.com/blueskye16" target="_blank" rel="noopener noreferrer">
+                <FaGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/fabianus-kevin-406285231/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
             </div>
           </div>
           {/* Kotak 5 */}
