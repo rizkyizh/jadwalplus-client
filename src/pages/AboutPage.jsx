@@ -13,7 +13,7 @@ const AboutPage = () => {
           className="about-image"
         />
         <div>
-          <h3 className="about-heading">JadwalPlus</h3>
+          <h4 className="about-heading">JadwalPlus</h4>
           <p className="about-text">
             JadwalPlus mengajak kepada pengguna untuk mengatur jadwal lebih efisien,
             {' '}
@@ -32,7 +32,7 @@ const AboutPage = () => {
       </div>
       <div className="team-section">
         <div className="team-heading-container">
-          <h3 className="team-heading">Tim Kami</h3>
+          <h4 className="team-heading">Tim Kami</h4>
           <div className="team-line" />
         </div>
         <div className="member-container">

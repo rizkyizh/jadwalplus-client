@@ -23,7 +23,7 @@ h2 {
   h3 {
     position: relative;
     color:#0D3298;
-    margin-left: 80px;
+    margin-right: 10px;
   }
   
   h3::before {
@@ -49,7 +49,7 @@ h2 {
     margin-bottom: 10px; 
   }
   
-  p {
+  .p1 {
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     line-height: 1.5;
@@ -58,4 +58,17 @@ h2 {
     color: black;
     margin-top: 1px;
   }
-  
+
+  .center-box {
+    width: 75%; /* Sesuaikan ukuran kotak sesuai kebutuhan Anda */
+    height: 70%; /* Sesuaikan ukuran kotak sesuai kebutuhan Anda */
+    background-color: red;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 10px;
+    background: #DEE4F1;
+    box-shadow: 20px 4px 4px 0px rgba(0, 0, 0, 0.50);
+  }

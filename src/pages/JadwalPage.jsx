@@ -12,6 +12,7 @@ const JadwalPage = () => {
           className="about-image"
         />
         <div>
+          <div className="center-box" />
           <h4 className="about-heading">JadwalPlus</h4>
           <p className="about-text">
             JadwalPlus mengajak kepada pengguna untuk mengatur jadwal lebih efisien,
@@ -41,7 +42,7 @@ const JadwalPage = () => {
             </p1>
             <h3 data-section-counter="3">Dengan Bersih, Kita Dapat Pahala</h3>
             <p1>
-              Dengan aplikasi JadwalPlus,Dapat melacak kemajuan target belajar. 
+              Dengan aplikasi JadwalPlus,Dapat melacak kemajuan target belajar.
               Ini membantu pengguna untuk tetap fokus dan termotivasi.
             </p1>
           </div>

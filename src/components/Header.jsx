@@ -11,7 +11,7 @@ const Header = () => {
           <span>JadwalPlus</span>
         </div>
         <ul>
-          <li className="nav-item"><Link to="/" className="active">Beranda</Link></li>
+          <li className="nav-item"><Link to="/" className="active">Home</Link></li>
           <li className="nav-item"><Link to="/jadwalpage">JadwalPlus</Link></li>
           <li className="nav-item"><Link to="/about">Tentang Kami</Link></li>
           <li className="auth-box login-box"><Link to="/login" className="auth-aja">Masuk</Link></li>
