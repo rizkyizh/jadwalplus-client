@@ -1,7 +1,6 @@
 const ActionType = {
   SCHEDULES_ADD: 'SCHEDULES_ADD',
   SCHEDULES_RECEIVE: 'SCHEDULES_RECEIVE',
-  // SCHEDULES_GET: 'SCHEDULES_GET',
   SCHEDULES_FINISHED: 'SCHEDULES_FINISHED',
   SCHEDULES_DELETE: 'SCHEDULES_DELETE',
   SCHEDULES_UPDATE: 'SCHEDULES_UPDATE',
@@ -24,16 +23,6 @@ const addScheduleActionCreator = (schedule) => {
     },
   };
 };
-
-// belum digunakan
-// const getScheduleActionCreator = (id) => {
-//   return {
-//     type: ActionType.SCHEDULES_GET,
-//     payload: {
-//       id,
-//     },
-//   };
-// };
 
 const finishedScheduleActionCreator = (id) => {
   return {
@@ -67,7 +56,6 @@ const updateScheduleActionCreator = ({ id, schedule, dateTime }) => {
 export {
   receiveSchedulesActionCreator,
   addScheduleActionCreator,
-  // getScheduleActionCreator,
   finishedScheduleActionCreator,
   deleteScheduleActionCreator,
   updateScheduleActionCreator,
