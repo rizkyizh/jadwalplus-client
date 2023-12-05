@@ -38,6 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 .wrap-icon {
@@ -46,11 +47,12 @@ body {
 }
 
 .bgimage {
-  background-image: url('../public/image/book.jpg');
+  /* background-image: url('../public/image/book.jpg'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh; 
+  background-color: rgb(112, 112, 112);
 }
 
 .margin-bottom-4rem {

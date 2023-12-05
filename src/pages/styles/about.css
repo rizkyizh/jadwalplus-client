@@ -1,59 +1,163 @@
-h2 {
-  color: #112049;
-  font-size: 30px;
-  line-height: 30px;
-  margin-top: 40px;
-  text-align: center;
-  margin-bottom: 80px;
-  position: relative;
-}
 
-h2::after {
-  content: ""; 
-  display: block; 
-  border-bottom: 4px solid#112049;
-  width: 500px;
-  position: absolute; 
-  margin-top: -30px; 
-  left: 50%; 
-  transform: translateX(-50%);
-  padding-bottom: 50px; 
-}
 
-h3 {
-  position: relative;
-  color:#112049;
-  margin-left: 200px;
-}
-
-h3::before {
-  content: attr(data-section-counter); 
-  display: inline-block;
-  width: 40px; 
-  height: 40px;
-  background-color: 
-  #1F3C88; 
-  color: white;
-  font-size: 24px; 
-  line-height: 40px; 
-  text-align: center;
-  border-radius: 50%; 
-  margin-right: 15px; 
-  position: absolute;
-  left: -60px; 
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-h3[data-section-counter="1"] {
-  margin-bottom: px; 
-}
-
-p1 {
+.about-text{
   font-family: 'Quicksand', sans-serif;
   line-height: 1.5;
   margin: 15px 0px; 
   margin-left: 200px;
   color: #000000; 
-  margin-top: 1px;
+  margin-top: -25%;
 }
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.about-image {
+  margin-top: 40px;
+  max-width: 100%;
+}
+
+.text-container {
+  flex: 2;
+}
+
+.about-heading {
+  color: #112049;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  margin-left: 1%;
+  margin-top:40px;
+}
+
+
+.team-section {
+  text-align: center;
+  margin-top: 40px; 
+}
+
+.team-heading-container {
+  position: relative;
+  display: inline-block;
+}
+
+.team-heading {
+  color: #112049;
+  margin-left: 0%;
+  margin-bottom: 2px; 
+}
+
+.team-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 200px;
+  background-color: #708CD5;
+}
+
+/* kotak */
+.member-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap:inherit ;
+  }
+  
+  .member-box {
+    position: relative;
+    width: calc(32% - 10px);
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden; 
+  }
+
+.member-box:not(:last-child) {
+  margin-right: 10px; 
+  margin-bottom: 10px;
+}
+
+
+.member-box .member-content .member-image {
+  width: 60px; 
+  height: 60px; 
+  border-radius: 50%;
+  border: 2px solid black; 
+  overflow: hidden; 
+}
+
+.member-box .member-content {
+  position: absolute;
+  top: 30px; 
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; 
+  color: #FFFFFF; 
+  z-index: 1; 
+}
+.member-box h4 {
+  font-size: 10px;
+  margin-bottom: 5px;
+  color: #112049;
+  margin-top:0%;
+}
+
+.member-box p {
+  font-size: 10px;
+  margin: -5px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+/* kotak merah */
+.member-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30%; 
+  background-color: #378CDB; 
+  border-radius: 8px 8px 0 0;
+  z-index: -1; 
+}
+
+ /* Kotak bawah */
+.member-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%; 
+  background-color: #FFFFFF;
+  border-radius: 0 0 8px 8px;
+  z-index: -1; 
+}
+
+.member-box .social-icons {
+  position: absolute;
+  bottom: 10px; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* icons */
+.social-icons {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  color: #1F3C88;
+  cursor:pointer;
+}
+
+.social-icons > * {
+  margin: 25px 5px; 
+}
+

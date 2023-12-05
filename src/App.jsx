@@ -10,11 +10,13 @@ import Beranda from './pages/Beranda';
 import NavigationTop from './components/NavigationTop';
 import NavigationBottom from './components/NavigationBottom';
 import AddSchedulePage from './pages/AddSchedulePage';
+import ArsipPage from './pages/ArsipPage';
+import JadwalPage from './pages/JadwalPage';
 
 const App = () => {
   // false --> halaman sebelum login
   // true --> halaman setelah login
-  const [authUser, setAuthUser] = useState(true);
+  const [authUser, setAuthUser] = useState(false);
   const location = useLocation();
   const path = location.pathname;
 
@@ -28,6 +30,7 @@ const App = () => {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/JadwalPage" element={<JadwalPage />} />
           </Routes>
         </main>
         { path !== '/register' && path !== '/login' && <Footer /> }
@@ -40,6 +43,7 @@ const App = () => {
       <NavigationTop />
       <Routes>
         <Route path="/" element={<Beranda />} />
+        <Route path="/schedules/arsip" element={<ArsipPage />} />
         <Route path="/schedule/add" element={<AddSchedulePage />} />
       </Routes>
       <NavigationBottom />

@@ -1,6 +1,10 @@
 import React from 'react';
-import { FaHome, FaPlusCircle, FaSignOutAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import {
+  FaHome, FaPlusCircle, FaArchive, FaSignOutAlt,
+} from 'react-icons/fa';
+import { Link }
+
+  from 'react-router-dom';
 import '../pages/styles/auth.css';
 
 const NavigationBottom = () => {
@@ -19,10 +23,17 @@ const NavigationBottom = () => {
             <span className="icon-label">Add</span>
           </Link>
         </div>
+        <div className="navigation-icon" id="add-book-icon">
+          <Link to="/schedules/arsip" className="wrap-icon reset-link">
+            <FaArchive className="icon-navigation-action" />
+            {' '}
+            <span className="icon-label">Arsip</span>
+          </Link>
+        </div>
         <div className="navigation-icon" id="About">
           <button type="button" className="wrap-icon reset-button">
             <FaSignOutAlt className="icon-navigation-action" />
-            <span className="icon-label">About</span>
+            <span className="icon-label">keluar</span>
           </button>
         </div>
       </div>

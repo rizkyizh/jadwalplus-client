@@ -37,9 +37,6 @@ const AddSchedulePage = () => {
             onChange={(e) => setDateTime(e.target.value)}
           />
         </div>
-        <div className="input-container">
-          <textarea id="keterangan" name="keterangan" placeholder="Masukkan keterangan" />
-        </div>
         <div className="button-container">
           <button id="simpanButton" className="save-button" type="submit">SIMPAN</button>
         </div>
