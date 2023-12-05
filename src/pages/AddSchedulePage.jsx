@@ -1,14 +1,33 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import useInput from '../hooks/useInput';
+import { addScheduleActionCreator } from '../states/schedules/action';
 import './styles/addSchedule.css';
 
 const AddSchedulePage = () => {
   const [schedule, setSchedule] = useInput('');
   const [dateTime, setDateTime] = useInput('');
 
+  const dispatch = useDispatch();
+
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log({ schedule, dateTime });
+
+    const id = +new Date();
+    const createdAt = new Date().toISOString();
+    const finished = false;
+    const formatDateTime = new Date(dateTime).toISOString();
+
+    dispatch(addScheduleActionCreator({
+      schedule, dateTime: formatDateTime, id, createdAt, finished,
+    }));
+
+    setSchedule('');
+    setDateTime('');
+  };
+
+  const minToday = () => {
+    return new Date().toISOString().split('T')[0];
   };
 
   return (
@@ -33,6 +52,7 @@ const AddSchedulePage = () => {
             type="date"
             id="tanggal"
             name="tanggal"
+            min={minToday()}
             value={dateTime}
             onChange={(e) => setDateTime(e.target.value)}
           />

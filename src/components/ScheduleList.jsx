@@ -7,7 +7,10 @@ const ScheduleList = ({ schedules }) => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} className="margin-bottom-4rem">
       {
-        schedules.map((schedule) => <ScheduleItem key={schedule.id} schedule={schedule} />)
+        schedules.length
+          ? schedules.map((schedule) => !schedule.finished && (
+            <ScheduleItem key={schedule.id} schedule={schedule} />))
+          : (<p>Schedule belum dibuat</p>)
       }
     </div>
   );
