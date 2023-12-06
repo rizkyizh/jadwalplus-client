@@ -110,6 +110,21 @@ const asyncDeleteSchedule = (scheduleId) => {
   };
 };
 
+const asyncUpdateSchedule = ({ id, schedule, dateTime }) => {
+  return async (dispatch) => {
+    try {
+      const newSchedule = await api.updateSchedule({ id, schedule, dateTime });
+      dispatch(updateScheduleActionCreator({
+        id: newSchedule.id,
+        schedule: newSchedule.schedule,
+        dateTime: newSchedule.dateTime,
+      }));
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+};
+
 export {
   receiveSchedulesActionCreator,
   addScheduleActionCreator,
@@ -122,4 +137,5 @@ export {
   asyncAddSchedule,
   asyncFinishedSchedule,
   asyncDeleteSchedule,
+  asyncUpdateSchedule,
 };

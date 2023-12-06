@@ -68,7 +68,7 @@ const App = () => {
         <Route path="/" element={<Beranda />} />
         <Route path="/schedules/arsip" element={<ArsipPage />} />
         <Route path="/schedule/add" element={<AddSchedulePage />} />
-        <Route path="/schedule/edit" element={<EditPage />} />
+        <Route path="/schedule/edit/:id" element={<EditPage />} />
       </Routes>
       <NavigationBottom logout={onLogout} />
     </div>

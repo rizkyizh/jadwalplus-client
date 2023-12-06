@@ -38,4 +38,25 @@ describe('detailScheduleReducer', () => {
     // Assert
     expect(nextState).toEqual(action.payload.detailSchedule);
   });
+
+  it('should return null when action SCHEDULES_CLEAR_DETAIL', () => {
+    // Arrange
+    const initialState = {
+      id: '47t42784',
+      schedule: 'memancing',
+      dateTime: '2023-11-14T14:00:10.690Z',
+      finished: false,
+      createdAt: '2023-11-14T14:00:10.690Z',
+    };
+
+    const action = {
+      type: 'SCHEDULES_CLEAR_DETAIL',
+    };
+
+    // action
+    const nextState = detailScheduleReducer(initialState, action);
+
+    // expect
+    expect(nextState).toEqual(null);
+  });
 });

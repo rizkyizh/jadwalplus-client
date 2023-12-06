@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { FaCheckCircle, FaTrashAlt, FaEdit } from 'react-icons/fa';
 import { asyncFinishedSchedule, asyncDeleteSchedule } from '../states/schedules/action';
@@ -12,9 +13,9 @@ const ScheduleItem = ({ schedule }) => {
     dispatch(asyncFinishedSchedule(id));
   };
 
-  const findSchedule = (id) => {
-    // dispatch(editScheduleActionCreator(id));
-  };
+  // const findSchedule = (id) => {
+  //   // dispatch(editScheduleActionCreator(id));
+  // };
 
   const deleteSchedule = (id) => {
     dispatch(asyncDeleteSchedule(id));
@@ -38,9 +39,9 @@ const ScheduleItem = ({ schedule }) => {
         <p>{schedule.finished ? 'selesai' : 'belum selesai'}</p>
       </div>
       <div className="container-check">
-        <button type="button" aria-label="edit-btn" onClick={() => findSchedule(schedule.id)}>
+        <Link to={`/schedule/edit/${schedule.id}`}>
           <FaEdit className="fa-icon-size" />
-        </button>
+        </Link>
         <button type="button" aria-label="delete-btn" onClick={() => deleteSchedule(schedule.id)}>
           <FaTrashAlt className="fa-icon-size" />
         </button>

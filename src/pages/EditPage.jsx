@@ -1,34 +1,53 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import useInput from '../hooks/useInput';
-import { editScheduleActionCreator } from '../states/schedules/action';
+import { asyncGetDetailSchedule, clearDetailScheduleActionCreator } from '../states/detailSchedule/action';
+import { asyncUpdateSchedule } from '../states/schedules/action';
 import './styles/addSchedule.css';
 
 const EditSchedulePage = () => {
-  const [schedule, setSchedule] = useInput('');
-  const [dateTime, setDateTime] = useInput('');
-
+  const { id } = useParams();
+  const {
+    detailSchedule = null,
+  } = useSelector((states) => states);
   const dispatch = useDispatch();
+  console.log(detailSchedule);
+
+  useEffect(() => {
+    dispatch(asyncGetDetailSchedule(id));
+  }, [id, dispatch]);
+
+  const navigate = useNavigate();
+
+  // const dateTimeFormated = new Date(detailSchedule.dateTime).toISOString().split('T')[0];
+  // const [schedule, setSchedule] = useInput('');
+  // const [dateTime, setDateTime] = useInput('');
+  const [schedule, setSchedule] = useState(detailSchedule?.schedule);
+  const [dateTime, setDateTime] = useState(detailSchedule?.dateTime);
 
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const id = +new Date();
-    const createdAt = new Date().toISOString();
-    const finished = false;
     const formatDateTime = new Date(dateTime).toISOString();
 
-    dispatch(editScheduleActionCreator({
-      schedule, dateTime: formatDateTime, id, createdAt, finished,
+    dispatch(asyncUpdateSchedule({
+      id: detailSchedule.id, schedule, dateTime: formatDateTime,
     }));
 
     setSchedule('');
     setDateTime('');
+
+    navigate('/');
   };
 
   const minToday = () => {
     return new Date().toISOString().split('T')[0];
   };
+
+  if (!detailSchedule) {
+    return null;
+  }
 
   return (
     <form
