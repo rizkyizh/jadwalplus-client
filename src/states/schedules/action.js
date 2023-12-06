@@ -1,3 +1,5 @@
+import api from '../../utils/network-data';
+
 const ActionType = {
   SCHEDULES_ADD: 'SCHEDULES_ADD',
   SCHEDULES_RECEIVE: 'SCHEDULES_RECEIVE',
@@ -34,11 +36,12 @@ const editScheduleActionCreator = (schedule) => {
   };
 };
 
-const finishedScheduleActionCreator = (id) => {
+const finishedScheduleActionCreator = (id, finished) => {
   return {
     type: ActionType.SCHEDULES_FINISHED,
     payload: {
       id,
+      finished,
     },
   };
 };
@@ -63,6 +66,50 @@ const updateScheduleActionCreator = ({ id, schedule, dateTime }) => {
   };
 };
 
+const asyncGetAllSchedule = () => {
+  return async (dispatch) => {
+    try {
+      const schedules = await api.getAllSchedule();
+      dispatch(receiveSchedulesActionCreator(schedules));
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+};
+
+const asyncAddSchedule = ({ schedule, dateTime }) => {
+  return async (dispatch) => {
+    try {
+      const newSchedule = await api.addSchedule({ schedule, dateTime });
+      dispatch(addScheduleActionCreator(newSchedule));
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+};
+
+const asyncFinishedSchedule = (scheduleId) => {
+  return async (dispatch) => {
+    try {
+      const { id, finished } = await api.finishedSchedule(scheduleId);
+      dispatch(finishedScheduleActionCreator(id, finished));
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+};
+
+const asyncDeleteSchedule = (scheduleId) => {
+  return async (dispatch) => {
+    try {
+      const id = await api.deleteSchedule(scheduleId);
+      dispatch(deleteScheduleActionCreator(id));
+    } catch (error) {
+      alert(error.message);
+    }
+  };
+};
+
 export {
   receiveSchedulesActionCreator,
   addScheduleActionCreator,
@@ -71,4 +118,8 @@ export {
   updateScheduleActionCreator,
   editScheduleActionCreator,
   ActionType,
+  asyncGetAllSchedule,
+  asyncAddSchedule,
+  asyncFinishedSchedule,
+  asyncDeleteSchedule,
 };

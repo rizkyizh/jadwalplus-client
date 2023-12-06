@@ -2,22 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { FaCheckCircle, FaTrashAlt, FaEdit } from 'react-icons/fa';
-import { finishedScheduleActionCreator, deleteScheduleActionCreator, editScheduleActionCreator } from '../states/schedules/action';
+import { asyncFinishedSchedule, asyncDeleteSchedule } from '../states/schedules/action';
 import showFormattedDate from '../utils/showFormattedDate';
 
 const ScheduleItem = ({ schedule }) => {
   const dispatch = useDispatch();
 
   const finishedSchedule = (id) => {
-    dispatch(finishedScheduleActionCreator(id));
+    dispatch(asyncFinishedSchedule(id));
   };
 
-  const editSchedule = (id) => {
-    dispatch(editScheduleActionCreator(id));
+  const findSchedule = (id) => {
+    // dispatch(editScheduleActionCreator(id));
   };
 
   const deleteSchedule = (id) => {
-    dispatch(deleteScheduleActionCreator(id));
+    dispatch(asyncDeleteSchedule(id));
   };
 
   return (
@@ -38,7 +38,7 @@ const ScheduleItem = ({ schedule }) => {
         <p>{schedule.finished ? 'selesai' : 'belum selesai'}</p>
       </div>
       <div className="container-check">
-        <button type="button" aria-label="edit-btn" onClick={() => editSchedule(schedule.id)}>
+        <button type="button" aria-label="edit-btn" onClick={() => findSchedule(schedule.id)}>
           <FaEdit className="fa-icon-size" />
         </button>
         <button type="button" aria-label="delete-btn" onClick={() => deleteSchedule(schedule.id)}>

@@ -1,37 +1,37 @@
 import { ActionType } from './action';
 
-const schedulesData = [
-  {
-    id: 'jsndjcknd',
-    schedule: 'makan',
-    dateTime: '2023-12-05T12:34:56.789Z',
-    createdAt: '2023-12-05T12:34:56.789Z',
-    finished: false,
-  },
-  {
-    id: 'jsndjck',
-    schedule: 'minum',
-    dateTime: '2023-12-05T12:34:56.789Z',
-    createdAt: '2023-12-05T12:34:56.789Z',
-    finished: false,
-  },
-  {
-    id: 'jsndjnd',
-    schedule: 'renang',
-    dateTime: '2023-12-05T12:34:56.789Z',
-    createdAt: '2023-12-05T12:34:56.789Z',
-    finished: false,
-  },
-  {
-    id: 'jsndjna',
-    schedule: 'renang',
-    dateTime: '2023-12-05T12:34:56.789Z',
-    createdAt: '2023-12-05T12:34:56.789Z',
-    finished: false,
-  },
-];
+// const schedulesData = [
+//   {
+//     id: 'jsndjcknd',
+//     schedule: 'makan',
+//     dateTime: '2023-12-05T12:34:56.789Z',
+//     createdAt: '2023-12-05T12:34:56.789Z',
+//     finished: false,
+//   },
+//   {
+//     id: 'jsndjck',
+//     schedule: 'minum',
+//     dateTime: '2023-12-05T12:34:56.789Z',
+//     createdAt: '2023-12-05T12:34:56.789Z',
+//     finished: false,
+//   },
+//   {
+//     id: 'jsndjnd',
+//     schedule: 'renang',
+//     dateTime: '2023-12-05T12:34:56.789Z',
+//     createdAt: '2023-12-05T12:34:56.789Z',
+//     finished: false,
+//   },
+//   {
+//     id: 'jsndjna',
+//     schedule: 'renang',
+//     dateTime: '2023-12-05T12:34:56.789Z',
+//     createdAt: '2023-12-05T12:34:56.789Z',
+//     finished: false,
+//   },
+// ];
 
-const schedulesReducer = (schedules = schedulesData || [], action = {}) => {
+const schedulesReducer = (schedules = [], action = {}) => {
   switch (action.type) {
     case ActionType.SCHEDULES_RECEIVE:
       return [...action.payload.schedules];
@@ -40,7 +40,7 @@ const schedulesReducer = (schedules = schedulesData || [], action = {}) => {
     case ActionType.SCHEDULES_FINISHED:
       return schedules.map((schedule) => (
         schedule.id === action.payload.id
-          ? { ...schedule, finished: !schedule.finished } : schedule));
+          ? { ...schedule, finished: action.payload.finished } : schedule));
     case ActionType.SCHEDULES_DELETE:
       return schedules.filter((schedule) => schedule.id !== action.payload.id);
     case ActionType.SCHEDULES_UPDATE:

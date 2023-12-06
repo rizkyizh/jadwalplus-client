@@ -1,7 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import useInput from '../hooks/useInput';
-import { addScheduleActionCreator } from '../states/schedules/action';
+import { asyncAddSchedule } from '../states/schedules/action';
 import './styles/addSchedule.css';
 
 const AddSchedulePage = () => {
@@ -9,21 +10,21 @@ const AddSchedulePage = () => {
   const [dateTime, setDateTime] = useInput('');
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const id = +new Date();
-    const createdAt = new Date().toISOString();
-    const finished = false;
     const formatDateTime = new Date(dateTime).toISOString();
 
-    dispatch(addScheduleActionCreator({
-      schedule, dateTime: formatDateTime, id, createdAt, finished,
+    dispatch(asyncAddSchedule({
+      schedule, dateTime: formatDateTime,
     }));
 
     setSchedule('');
     setDateTime('');
+
+    navigate('/');
   };
 
   const minToday = () => {

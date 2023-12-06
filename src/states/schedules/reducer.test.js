@@ -94,6 +94,7 @@ describe('schedulesReducer function', () => {
       type: 'SCHEDULES_FINISHED',
       payload: {
         id: '47t42784',
+        finished: false,
       },
     };
 
@@ -103,7 +104,7 @@ describe('schedulesReducer function', () => {
     // Assert
     expect(nextState).toEqual(initialState.map((schedule) => (
       schedule.id === action.payload.id
-        ? { ...schedule, finished: !schedule.finished } : schedule)));
+        ? { ...schedule, finished: action.payload.finished } : schedule)));
   });
 
   it('should return schedules without schedule deleted value when SCHEDULES_DELETE', () => {

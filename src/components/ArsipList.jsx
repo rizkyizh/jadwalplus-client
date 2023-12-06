@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ScheduleItem from './ScheduleItem';
 
 const ArsipList = ({ schedules }) => {
-  const arsipScheduleLength = schedules.filter((schedule) => schedule.finished);
+  const arsipScheduleLength = schedules.filter((schedule) => schedule.finished).length;
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} className="margin-bottom-4rem">
