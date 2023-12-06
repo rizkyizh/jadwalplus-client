@@ -1,17 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
 import useInput from '../hooks/useInput';
+import { asyncRegisterUser } from '../states/authUser/action';
 import './styles/auth.css';
 
 const RegisterPage = () => {
   const [email, setEmail] = useInput('');
   const [username, setUsername] = useInput('');
   const [password, setPassword] = useInput('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log({ email, username, password });
+    dispatch(asyncRegisterUser({ email, username, password }));
+    navigate('/login');
   };
 
   return (
@@ -46,7 +51,7 @@ const RegisterPage = () => {
               <FaLock />
               <input
                 type="password"
-                placeholder="tanggal"
+                placeholder="Password pengguna"
                 id="mytanggal"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -57,7 +62,7 @@ const RegisterPage = () => {
             <button type="submit" id="signinBtn" className="signBtn">Daftar</button>
             <p>
               Sudah memiliki akun?
-              <Link to="/login" id="signUpLink">Masuk</Link>
+              <Link to="/" id="signUpLink">Masuk</Link>
             </p>
           </div>
         </form>

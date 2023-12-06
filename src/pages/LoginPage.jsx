@@ -1,16 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
 import useInput from '../hooks/useInput';
+import { asyncSetAuthUser } from '../states/authUser/action';
 import './styles/auth.css';
 
 const LoginPage = () => {
   const [email, setEmail] = useInput('');
   const [password, setPassword] = useInput('');
+  const dispatch = useDispatch();
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log({ email, password });
+    dispatch(asyncSetAuthUser({ email, password }));
   };
 
   return (

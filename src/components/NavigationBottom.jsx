@@ -2,12 +2,11 @@ import React from 'react';
 import {
   FaHome, FaPlusCircle, FaArchive, FaSignOutAlt,
 } from 'react-icons/fa';
-import { Link }
-
-  from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import '../pages/styles/auth.css';
 
-const NavigationBottom = () => {
+const NavigationBottom = ({ logout }) => {
   return (
     <div className="navigation navigation-bottom">
       <div className="navigation-icons container-icon">
@@ -31,7 +30,7 @@ const NavigationBottom = () => {
           </Link>
         </div>
         <div className="navigation-icon" id="About">
-          <button type="button" className="wrap-icon reset-button">
+          <button type="button" className="wrap-icon reset-button" onClick={logout}>
             <FaSignOutAlt className="icon-navigation-action" />
             <span className="icon-label">keluar</span>
           </button>
@@ -39,6 +38,10 @@ const NavigationBottom = () => {
       </div>
     </div>
   );
+};
+
+NavigationBottom.propTypes = {
+  logout: PropTypes.func.isRequired,
 };
 
 export default NavigationBottom;

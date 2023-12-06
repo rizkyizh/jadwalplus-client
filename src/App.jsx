@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import HomePage from './pages/HomePage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
@@ -13,28 +14,49 @@ import AddSchedulePage from './pages/AddSchedulePage';
 import ArsipPage from './pages/ArsipPage';
 import JadwalPage from './pages/JadwalPage';
 import EditPage from './pages/EditPage';
+import { asyncPreloadProcess } from './states/isPreload/action';
+import { asyncUnsetAuthUser } from './states/authUser/action';
 
 const App = () => {
   // false --> halaman sebelum login
   // true --> halaman setelah login
-  const [authUser, setAuthUser] = useState(false);
+  // const [authUser, setAuthUser] = useState(false);
+  const {
+    authUser = null,
+    isPreload = false,
+  } = useSelector((states) => states);
+
   const location = useLocation();
   const path = location.pathname;
 
-  if (authUser === false) {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(asyncPreloadProcess());
+  }, [dispatch]);
+
+  const onLogout = () => {
+    dispatch(asyncUnsetAuthUser());
+  };
+
+  if (isPreload) {
+    return null;
+  }
+
+  if (authUser === null) {
     return (
       <div className="min-height-100">
-        { path !== '/register' && path !== '/login' && <Header /> }
+        { path !== '/register' && path !== '/' && <Header /> }
         <main>
           <Routes>
-            <Route path="/*" element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
+            <Route path="/home" element={<HomePage />} />
+            <Route path="/*" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/JadwalPage" element={<JadwalPage />} />
           </Routes>
         </main>
-        { path !== '/register' && path !== '/login' && <Footer /> }
+        { path !== '/register' && path !== '/' && <Footer /> }
       </div>
     );
   }
@@ -48,7 +70,7 @@ const App = () => {
         <Route path="/schedule/add" element={<AddSchedulePage />} />
         <Route path="/schedule/edit" element={<EditPage />} />
       </Routes>
-      <NavigationBottom />
+      <NavigationBottom logout={onLogout} />
     </div>
   );
 };

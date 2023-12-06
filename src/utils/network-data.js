@@ -28,7 +28,7 @@ const register = async ({ username, email, password }) => {
 };
 
 const login = async ({ email, password }) => {
-  const response = await fetch(`${BASE_URL}/api/v1/signup`, {
+  const response = await fetch(`${BASE_URL}/api/v1/signin`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
