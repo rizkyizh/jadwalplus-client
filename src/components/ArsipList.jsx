@@ -6,7 +6,12 @@ const ArsipList = ({ schedules }) => {
   const arsipScheduleLength = schedules.filter((schedule) => schedule.finished).length;
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} className="margin-bottom-4rem">
+    <div
+      style={{
+        display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center', alignItems: 'center',
+      }}
+      className="margin-bottom-4rem"
+    >
       {
         arsipScheduleLength
           ? schedules.map((schedule) => schedule.finished && (

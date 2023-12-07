@@ -6,12 +6,17 @@ const ScheduleList = ({ schedules }) => {
   const activeScheduleLength = schedules.filter((schedule) => !schedule.finished).length;
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }} className="margin-bottom-4rem">
+    <div
+      style={{
+        display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center', alignItems: 'center',
+      }}
+      className="margin-bottom-4rem"
+    >
       {
         activeScheduleLength
           ? schedules.map((schedule) => !schedule.finished && (
             <ScheduleItem key={schedule.id} schedule={schedule} />))
-          : (<p>Schedule belum dibuat</p>)
+          : (<p>Schedule kosong</p>)
       }
     </div>
   );

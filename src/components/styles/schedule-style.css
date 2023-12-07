@@ -1,0 +1,55 @@
+.schedule-container {
+  background-color: #FFFFFF;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.greyText{
+  color: #877E82;
+}
+
+button{
+  background: none;
+  border: none;
+}
+
+#btn-edit{
+  color: rgb(8, 175, 8);
+  cursor: pointer;
+}
+
+#btn-edit :hover{
+  color: rgb(12, 125, 12);
+}
+
+#btn-delete{
+  color: red;
+  cursor: pointer;
+  margin-left: 2em;
+}
+
+#btn-delete :hover{
+  color: rgb(171, 10, 10);
+}
+
+#btn-check-item :hover{
+  color: rgb(8, 91, 8);
+  cursor: pointer;
+}
+
+.container-check{
+  margin: 0.5em;
+  margin-left: 0;
+}
+
+.container-check-editDelete button{
+  margin-right: 2em;
+  margin-left: 0;
+}
+
+#emptySchedule{
+  justify-content: center;
+  align-items: center;
+}

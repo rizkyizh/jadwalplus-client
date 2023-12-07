@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { FaCheckCircle, FaTrashAlt, FaEdit } from 'react-icons/fa';
 import { asyncFinishedSchedule, asyncDeleteSchedule } from '../states/schedules/action';
 import showFormattedDate from '../utils/showFormattedDate';
+import './styles/schedule-style.css';
 
 const ScheduleItem = ({ schedule }) => {
   const dispatch = useDispatch();
@@ -22,27 +23,27 @@ const ScheduleItem = ({ schedule }) => {
   };
 
   return (
-    <div style={{ backgroundColor: '#fff' }}>
-      <h4>{schedule.schedule}</h4>
-      <p>
-        <span>waktu : </span>
+    <div className="schedule-container">
+      <h4 id="schedule-text">{schedule.schedule}</h4>
+      <p className="greyText">
+        <span>Waktu : </span>
         {showFormattedDate(schedule.dateTime)}
       </p>
-      <p>
-        <span>dibuat pada : </span>
+      <p className="greyText">
+        <span>Dibuat pada : </span>
         {showFormattedDate(schedule.createdAt)}
       </p>
       <div className="container-check">
-        <button type="button" aria-label="checklist-btn" onClick={() => finishedSchedule(schedule.id)}>
+        <button id="btn-check-item" type="button" aria-label="checklist-btn" onClick={() => finishedSchedule(schedule.id)}>
           <FaCheckCircle className={`fa-icon-size ${schedule.finished ? 'bg-green' : 'bg-gray'}`} />
         </button>
-        <p>{schedule.finished ? 'selesai' : 'belum selesai'}</p>
+        <p>{schedule.finished ? 'Selesai' : 'Belum selesai'}</p>
       </div>
-      <div className="container-check">
+      <div className="container-check-editDelete">
         <Link to={`/schedule/edit/${schedule.id}`}>
-          <FaEdit className="fa-icon-size" />
+          <FaEdit id="btn-edit" className="fa-icon-size" />
         </Link>
-        <button type="button" aria-label="delete-btn" onClick={() => deleteSchedule(schedule.id)}>
+        <button id="btn-delete" type="button" aria-label="delete-btn" onClick={() => deleteSchedule(schedule.id)}>
           <FaTrashAlt className="fa-icon-size" />
         </button>
       </div>
