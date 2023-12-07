@@ -18,9 +18,6 @@ import { asyncPreloadProcess } from './states/isPreload/action';
 import { asyncUnsetAuthUser } from './states/authUser/action';
 
 const App = () => {
-  // false --> halaman sebelum login
-  // true --> halaman setelah login
-  // const [authUser, setAuthUser] = useState(false);
   const {
     authUser = null,
     isPreload = false,
@@ -63,7 +60,7 @@ const App = () => {
 
   return (
     <div className="min-height-100">
-      <NavigationTop />
+      <NavigationTop authUser={authUser} />
       <Routes>
         <Route path="/" element={<Beranda />} />
         <Route path="/schedules/arsip" element={<ArsipPage />} />

@@ -11,7 +11,7 @@ const ArsipList = ({ schedules }) => {
         arsipScheduleLength
           ? schedules.map((schedule) => schedule.finished && (
             <ScheduleItem key={schedule.id} schedule={schedule} />))
-          : (<p>Schedule belum dibuat</p>)
+          : (<p>Arsip Schedule kosong</p>)
       }
     </div>
   );

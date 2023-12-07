@@ -16,7 +16,7 @@ const RegisterPage = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(asyncRegisterUser({ email, username, password }));
-    navigate('/login');
+    navigate('/');
   };
 
   return (

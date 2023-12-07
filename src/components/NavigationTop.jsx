@@ -1,8 +1,9 @@
 import React from 'react';
 import './styles/header.css';
 import { FaUserCircle } from 'react-icons/fa';
+import PropTypes from 'prop-types';
 
-const NavigationTop = () => {
+const NavigationTop = ({ authUser }) => {
   return (
     <header>
       <nav>
@@ -10,7 +11,8 @@ const NavigationTop = () => {
           <img src="/image/logo.png" alt="Logo" className="logo-image" />
           <span>JadwalPlus</span>
         </div>
-        <ul>
+        <ul className="container-check">
+          <li>{authUser.username}</li>
           <li className="auth-user">
             <FaUserCircle className="auth-link icon-user" />
           </li>
@@ -18,6 +20,10 @@ const NavigationTop = () => {
       </nav>
     </header>
   );
+};
+
+NavigationTop.propTypes = {
+  authUser: PropTypes.object.isRequired,
 };
 
 export default NavigationTop;

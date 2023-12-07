@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import useInput from '../hooks/useInput';
-import { asyncGetDetailSchedule, clearDetailScheduleActionCreator } from '../states/detailSchedule/action';
+import { asyncGetDetailSchedule } from '../states/detailSchedule/action';
 import { asyncUpdateSchedule } from '../states/schedules/action';
 import './styles/addSchedule.css';
 
@@ -14,8 +14,13 @@ const EditSchedulePage = () => {
   const dispatch = useDispatch();
   console.log(detailSchedule);
 
+  const [schedule, setSchedule] = useInput('');
+  const [dateTime, setDateTime] = useInput('');
+
   useEffect(() => {
     dispatch(asyncGetDetailSchedule(id));
+    setSchedule(detailSchedule.schedule);
+    setDateTime(detailSchedule.dateTime);
   }, [id, dispatch]);
 
   const navigate = useNavigate();
@@ -23,8 +28,8 @@ const EditSchedulePage = () => {
   // const dateTimeFormated = new Date(detailSchedule.dateTime).toISOString().split('T')[0];
   // const [schedule, setSchedule] = useInput('');
   // const [dateTime, setDateTime] = useInput('');
-  const [schedule, setSchedule] = useState(detailSchedule?.schedule);
-  const [dateTime, setDateTime] = useState(detailSchedule?.dateTime);
+  // const [schedule, setSchedule] = useState(detailSchedule?.schedule);
+  // const [dateTime, setDateTime] = useState(detailSchedule?.dateTime);
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -35,8 +40,8 @@ const EditSchedulePage = () => {
       id: detailSchedule.id, schedule, dateTime: formatDateTime,
     }));
 
-    setSchedule('');
-    setDateTime('');
+    // setSchedule('');
+    // setDateTime('');
 
     navigate('/');
   };
