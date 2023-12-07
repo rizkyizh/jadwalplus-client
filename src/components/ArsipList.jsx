@@ -8,7 +8,7 @@ const ArsipList = ({ schedules }) => {
   return (
     <div
       style={{
-        display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center', alignItems: 'center',
+        display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center', alignItems: 'center', fontSize: 'larger',
       }}
       className="margin-bottom-4rem"
     >
