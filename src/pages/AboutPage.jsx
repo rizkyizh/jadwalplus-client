@@ -1,4 +1,3 @@
-// src/pages/AboutPage.jsx
 import React from 'react';
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import './styles/about.css';
@@ -36,16 +35,30 @@ const AboutPage = () => {
               <p>(Front end & UI/UX)</p>
             </div>
             <div className="social-icons">
-              <a href="https://www.instagram.com/munawar_amin2/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/munawar_amin2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="instagram-account"
+              >
                 <FaInstagram />
               </a>
-              <a href="https://github.com/munawaramin2002" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/munawaramin2002"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="github-account"
+              >
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/munawar-amin-734a06298/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/munawar-amin-734a06298/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="linkedin-account"
+              >
                 <FaLinkedin />
               </a>
-
             </div>
           </div>
           {/* Kotak 2 */}
@@ -56,13 +69,28 @@ const AboutPage = () => {
               <p>(Front end & UI/UX)</p>
             </div>
             <div className="social-icons">
-              <a href="https://www.instagram.com/munawar_amin2/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/munawar_amin2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="instagram-account"
+              >
                 <FaInstagram />
               </a>
-              <a href="https://github.com/RestuMS" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/RestuMS"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="github-account"
+              >
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/restu-muhammad-saputro-402888299/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/restu-muhammad-saputro-402888299/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="linkedin-account"
+              >
                 <FaLinkedin />
               </a>
             </div>
@@ -76,10 +104,20 @@ const AboutPage = () => {
             </div>
             <div className="social-icons">
               <FaInstagram />
-              <a href="https://github.com/adelintang" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/adelintang"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="github-account"
+              >
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/ade-lintang-permono-2b4a0b29a/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/ade-lintang-permono-2b4a0b29a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="linkedin-account"
+              >
                 <FaLinkedin />
               </a>
             </div>
@@ -93,10 +131,20 @@ const AboutPage = () => {
             </div>
             <div className="social-icons">
               <FaInstagram />
-              <a href="https://github.com/blueskye16" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/blueskye16"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="github-account"
+              >
                 <FaGithub />
               </a>
-              <a href="https://www.linkedin.com/in/fabianus-kevin-406285231/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/fabianus-kevin-406285231/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="linkedin-account"
+              >
                 <FaLinkedin />
               </a>
             </div>
