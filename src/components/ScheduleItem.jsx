@@ -14,13 +14,12 @@ const ScheduleItem = ({ schedule }) => {
     dispatch(asyncFinishedSchedule(id));
   };
 
-  // const findSchedule = (id) => {
-  //   // dispatch(editScheduleActionCreator(id));
-  // };
-
   const deleteSchedule = (id) => {
     dispatch(asyncDeleteSchedule(id));
   };
+
+  const today = new Date().toISOString().split('T')[0];
+  const dateTime = schedule.dateTime.split('T')[0];
 
   return (
     <div className="schedule-container">
@@ -47,6 +46,7 @@ const ScheduleItem = ({ schedule }) => {
           <FaTrashAlt className="fa-icon-size" />
         </button>
       </div>
+      {today === dateTime && (<p className="is-today">Tepat hari ini</p>)}
     </div>
   );
 };

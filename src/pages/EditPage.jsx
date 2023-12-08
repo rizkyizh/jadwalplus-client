@@ -20,7 +20,7 @@ const EditSchedulePage = () => {
   useEffect(() => {
     dispatch(asyncGetDetailSchedule(id));
     setSchedule(detailSchedule.schedule);
-    setDateTime(detailSchedule.dateTime);
+    setDateTime(new Date(detailSchedule.dateTime).toISOString().split('T')[0]);
   }, [id, dispatch]);
 
   const navigate = useNavigate();
@@ -39,9 +39,6 @@ const EditSchedulePage = () => {
     dispatch(asyncUpdateSchedule({
       id: detailSchedule.id, schedule, dateTime: formatDateTime,
     }));
-
-    // setSchedule('');
-    // setDateTime('');
 
     navigate('/');
   };
