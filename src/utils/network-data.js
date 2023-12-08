@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:5000';
+// const { VITE_BASE_API_URL } = import.meta.env;
+const VITE_BASE_API_URL = 'http://localhost:5000';
 
 const fetchWithAuth = async (url, options = {}) => {
   return fetch(url, {
@@ -11,7 +12,7 @@ const fetchWithAuth = async (url, options = {}) => {
 };
 
 const register = async ({ username, email, password }) => {
-  const response = await fetch(`${BASE_URL}/api/v1/signup`, {
+  const response = await fetch(`${VITE_BASE_API_URL}/api/v1/signup`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -28,7 +29,7 @@ const register = async ({ username, email, password }) => {
 };
 
 const login = async ({ email, password }) => {
-  const response = await fetch(`${BASE_URL}/api/v1/signin`, {
+  const response = await fetch(`${VITE_BASE_API_URL}/api/v1/signin`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -48,7 +49,7 @@ const login = async ({ email, password }) => {
 };
 
 const getOwnProfile = async () => {
-  const response = await fetchWithAuth(`${BASE_URL}/api/v1/user`);
+  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/user`);
   const responseJson = await response.json();
   const { status, message } = responseJson;
 
@@ -61,7 +62,7 @@ const getOwnProfile = async () => {
 };
 
 const deleteUser = async () => {
-  const response = await fetchWithAuth(`${BASE_URL}/api/v1/user`, {
+  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/user`, {
     method: 'DELETE',
   });
   const responseJson = await response.json();
@@ -75,7 +76,7 @@ const deleteUser = async () => {
 };
 
 const updateUserPassword = async ({ oldPassword, newPassword }) => {
-  const response = await fetchWithAuth(`${BASE_URL}/api/v1/user`, {
+  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/user`, {
     method: 'PATCH',
     headers: {
       'Content-type': 'application/json',
@@ -94,7 +95,7 @@ const updateUserPassword = async ({ oldPassword, newPassword }) => {
 };
 
 const addSchedule = async ({ schedule, dateTime }) => {
-  const response = await fetchWithAuth(`${BASE_URL}/api/v1/schedules`, {
+  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/schedules`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
@@ -114,7 +115,7 @@ const addSchedule = async ({ schedule, dateTime }) => {
 };
 
 const getAllSchedule = async () => {
-  const response = await fetchWithAuth(`${BASE_URL}/api/v1/schedules`);
+  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/schedules`);
   const responseJson = await response.json();
   const { status, message } = responseJson;
 
@@ -127,7 +128,7 @@ const getAllSchedule = async () => {
 };
 
 const getSchedule = async (id) => {
-  const response = await fetchWithAuth(`${BASE_URL}/api/v1/schedules/${id}`);
+  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/schedules/${id}`);
   const responseJson = await response.json();
   const { status, message } = responseJson;
 
@@ -140,7 +141,7 @@ const getSchedule = async (id) => {
 };
 
 const deleteSchedule = async (id) => {
-  const response = await fetchWithAuth(`${BASE_URL}/api/v1/schedules/${id}`, {
+  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/schedules/${id}`, {
     method: 'DELETE',
   });
   const responseJson = await response.json();
@@ -155,7 +156,7 @@ const deleteSchedule = async (id) => {
 };
 
 const finishedSchedule = async (id) => {
-  const response = await fetchWithAuth(`${BASE_URL}/api/v1/schedules/${id}`, {
+  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/schedules/${id}`, {
     method: 'PATCH',
   });
   const responseJson = await response.json();
@@ -170,7 +171,7 @@ const finishedSchedule = async (id) => {
 };
 
 const updateSchedule = async ({ id, schedule, dateTime }) => {
-  const response = await fetchWithAuth(`${BASE_URL}/api/v1/schedules/${id}`, {
+  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/schedules/${id}`, {
     method: 'PUT',
     headers: {
       'Content-type': 'application/json',
