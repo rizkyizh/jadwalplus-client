@@ -44,6 +44,7 @@ const AddSchedulePage = () => {
             id="username"
             name="username"
             placeholder="Judul Jadwal"
+            autoComplete="off"
             value={schedule}
             onChange={(e) => setSchedule(e.target.value)}
           />

@@ -83,3 +83,11 @@ body {
   background-color: white;
   z-index: 3;
 }
+
+.no-underline {
+  text-decoration: none;
+}
+
+.text-user-account {
+  font-size: 1.2rem;
+}

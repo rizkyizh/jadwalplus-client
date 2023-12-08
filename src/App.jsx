@@ -14,6 +14,7 @@ import AddSchedulePage from './pages/AddSchedulePage';
 import ArsipPage from './pages/ArsipPage';
 import JadwalPage from './pages/JadwalPage';
 import EditPage from './pages/EditPage';
+import UserAccount from './pages/UserAccount';
 import { asyncPreloadProcess } from './states/isPreload/action';
 import { asyncUnsetAuthUser } from './states/authUser/action';
 
@@ -66,6 +67,7 @@ const App = () => {
         <Route path="/schedules/arsip" element={<ArsipPage />} />
         <Route path="/schedule/add" element={<AddSchedulePage />} />
         <Route path="/schedule/edit/:id" element={<EditPage />} />
+        <Route path="/user" element={<UserAccount />} />
       </Routes>
       <NavigationBottom logout={onLogout} />
     </div>

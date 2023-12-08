@@ -70,6 +70,8 @@ const deleteUser = async () => {
   if (status !== 'success') {
     throw new Error(message);
   }
+
+  return message;
 };
 
 const updateUserPassword = async ({ oldPassword, newPassword }) => {
@@ -87,6 +89,8 @@ const updateUserPassword = async ({ oldPassword, newPassword }) => {
   if (status !== 'success') {
     throw new Error(message);
   }
+
+  return message;
 };
 
 const addSchedule = async ({ schedule, dateTime }) => {
