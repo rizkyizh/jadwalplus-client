@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles/heroElement.css';
 
 const HeroElement = () => {
@@ -15,9 +16,9 @@ const HeroElement = () => {
           <br />
           dengan JadwalPlus
         </p>
-        <a href="/#/beranda">
+        <Link to="/jadwalpage">
           <button className="hire-btn" type="button">JadwalPlus</button>
-        </a>
+        </Link>
       </div>
       <img alt="model" className="model" src="/image/foto.jpeg" />
     </div>
