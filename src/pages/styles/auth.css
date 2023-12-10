@@ -13,7 +13,6 @@
   position: relative;
 }
 
-
 .form-box {
   width: 90%;
   max-width: 450px;
@@ -182,4 +181,13 @@ a {
   .navigation-icon {
     margin: 0 10px; /* Mengurangi margin pada layar kecil */
   }
+}
+
+/* 
+  Navigation Bottom
+
+*/
+
+#logOut-icon{
+  margin-top: 10px;
 }

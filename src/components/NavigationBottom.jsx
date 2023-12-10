@@ -36,10 +36,10 @@ const NavigationBottom = ({ logout }) => {
             <span className="icon-label">Arsip</span>
           </Link>
         </div>
-        <div className="navigation-icon" id="About">
+        <div className="navigation-icon" id="logOut-icon">
           <button type="button" className="wrap-icon reset-button" onClick={logoutHandler}>
             <FaSignOutAlt className="icon-navigation-action" />
-            <span className="icon-label">keluar</span>
+            <span className="icon-label">Keluar</span>
           </button>
         </div>
       </div>
