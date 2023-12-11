@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: 0;
@@ -51,7 +53,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh; 
+  min-height: 100vh;
   background-color: #F3EEEA;
 }
 
@@ -97,4 +99,13 @@ body {
   color: limegreen;
   margin-top: 1rem;
   font-weight: 700;
+}
+
+.py-8 {
+  padding: 2rem 0;
+}
+
+.container-space {
+  display: grid;
+  row-gap: 2rem;
 }

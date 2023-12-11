@@ -114,8 +114,8 @@ const addSchedule = async ({ schedule, dateTime }) => {
   return newSchedule;
 };
 
-const getAllSchedule = async () => {
-  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/schedules`);
+const getAllSchedule = async (search = '') => {
+  const response = await fetchWithAuth(`${VITE_BASE_API_URL}/api/v1/schedules?search=${search}`);
   const responseJson = await response.json();
   const { status, message } = responseJson;
 

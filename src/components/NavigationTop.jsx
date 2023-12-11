@@ -13,7 +13,7 @@ const NavigationTop = ({ authUser }) => {
           <span>JadwalPlus</span>
         </div>
         <ul className="container-check">
-          <Link to="/user" className="container-check no-underline">
+          <Link to="/user/setting" className="container-check no-underline">
             <li className="text-user-account">{authUser.username}</li>
             <li className="auth-user">
               <FaUserCircle className="auth-link icon-user" />
