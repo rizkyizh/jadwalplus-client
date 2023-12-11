@@ -67,9 +67,9 @@ h2 {
 
   .center-box {
     width: 75%; /* Sesuaikan ukuran kotak sesuai kebutuhan Anda */
-    height: 86%; /* Sesuaikan ukuran kotak sesuai kebutuhan Anda */
+    height: 80%; /* Sesuaikan ukuran kotak sesuai kebutuhan Anda */
     position: absolute;
-    margin-top: 3.5em;
+    margin-top: 7.5em;
     top: 83%;
     left: 50%;
     transform: translate(-50%, -50%);
