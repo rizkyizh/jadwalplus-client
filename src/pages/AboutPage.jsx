@@ -125,7 +125,7 @@ const AboutPage = () => {
           {/* Kotak 4 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image" />
+              <img id="kevin-photo" src="./image/kevin.jpeg" alt="Foto Kevin" className="member-image" />
               <h4>Kevin</h4>
               <p>(Front end & UI/UX)</p>
             </div>

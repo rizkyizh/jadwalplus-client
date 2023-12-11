@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/about.css';
+// import './styles/about.css';
 import './styles/Jadwal.css';
 
 const JadwalPage = () => {
@@ -15,7 +15,9 @@ const JadwalPage = () => {
           <div className="center-box" />
           <h4 className="about-heading">JadwalPlus</h4>
           <p className="about-text">
-            JadwalPlus adalah sebuah jadwal dimana pengguna  mengelola jadwal
+            <strong>JadwalPlus</strong>
+            {' '}
+            adalah sebuah jadwal dimana pengguna  mengelola jadwal
             dengan baik,mengorganisir dan mengatur aktivitas belajar.
             Dalam konteks
             yang lebih umum, JadwalPlus membantu orang

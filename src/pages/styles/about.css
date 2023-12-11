@@ -161,6 +161,15 @@
 }
 
 .social-icons > * {
-  margin: 25px 5px; 
+  margin: 20px 5px; 
 }
 
+/* 
+  Photo
+
+*/
+
+#kevin-photo{
+  object-fit: cover;
+  /* object-position: 15% 100%; */
+}

@@ -27,7 +27,7 @@ const LoginPage = () => {
         <form onSubmit={submitHandler}>
           <div className="input-group">
             <div className="input-field">
-              <FaEnvelope />
+              <FaEnvelope className="input-icon" />
               <input
                 type="email"
                 placeholder="Masukkan Email..."
@@ -36,7 +36,7 @@ const LoginPage = () => {
               />
             </div>
             <div className="input-field">
-              <FaLock />
+              <FaLock className="input-icon" />
               <input
                 type="password"
                 placeholder="Kata Sandi"

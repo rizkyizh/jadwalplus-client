@@ -30,7 +30,7 @@ const RegisterPage = () => {
         <form onSubmit={submitHandler}>
           <div className="input-group">
             <div className="input-field">
-              <FaUser />
+              <FaUser className="input-icon" />
               <input
                 type="text"
                 placeholder="Nama pengguna"
@@ -39,7 +39,7 @@ const RegisterPage = () => {
               />
             </div>
             <div className="input-field" id="emailField">
-              <FaEnvelope />
+              <FaEnvelope className="input-icon" />
               <input
                 type="email"
                 placeholder="Email pengguna"
@@ -48,7 +48,7 @@ const RegisterPage = () => {
               />
             </div>
             <div className="input-field">
-              <FaLock />
+              <FaLock className="input-icon" />
               <input
                 type="password"
                 placeholder="Password pengguna"
