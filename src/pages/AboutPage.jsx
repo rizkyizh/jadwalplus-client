@@ -30,7 +30,7 @@ const AboutPage = () => {
           {/* Kotak 1 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image" />
+              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image photo" />
               <h4>Munawar</h4>
               <p>(Front end & UI/UX)</p>
             </div>
@@ -64,7 +64,7 @@ const AboutPage = () => {
           {/* Kotak 2 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image" />
+              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image photo" />
               <h4>Restu</h4>
               <p>(Front end & UI/UX)</p>
             </div>
@@ -98,7 +98,7 @@ const AboutPage = () => {
           {/* Kotak 3 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image" />
+              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image photo" />
               <h4>Ade Lintang</h4>
               <p>(Front end & back end)</p>
             </div>
@@ -125,7 +125,7 @@ const AboutPage = () => {
           {/* Kotak 4 */}
           <div className="member-box">
             <div className="member-content">
-              <img id="kevin-photo" src="./image/kevin.jpeg" alt="Foto Kevin" className="member-image" />
+              <img id="kevin-photo" src="./image/kevin.jpeg" alt="Foto Kevin" className="member-image photo" />
               <h4>Kevin</h4>
               <p>(Front end & UI/UX)</p>
             </div>
@@ -152,7 +152,7 @@ const AboutPage = () => {
           {/* Kotak 5 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image" />
+              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image photo" />
               <h4>Alul</h4>
               <p>(Front end & back end)</p>
             </div>

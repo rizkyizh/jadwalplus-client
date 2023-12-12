@@ -50,7 +50,7 @@ button:active {
   height: 400px;
   position: absolute;
   bottom:15%; 
-  left: 70%; 
+  left: 74%; 
   transform: translateX(-50%);
   z-index: 1; 
 }

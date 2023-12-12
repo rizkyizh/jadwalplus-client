@@ -58,7 +58,8 @@ body {
 }
 
 .margin-bottom-4rem {
-  margin-bottom: 10rem;
+  margin-bottom: 25rem;
+  /* text-align: center; */
 }
 
 .fa-icon-size {
