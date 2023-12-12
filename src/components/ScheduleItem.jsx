@@ -27,8 +27,8 @@ const ScheduleItem = ({ schedule }) => {
     navigate(`/schedule/edit/${id}`);
   };
 
-  const today = new Date().toISOString().split('T')[0];
-  const dateTime = schedule.dateTime.split('T')[0];
+  const today = new Date().toISOString();
+  const { dateTime } = schedule;
 
   return (
     <div className="schedule-container">
@@ -59,7 +59,7 @@ const ScheduleItem = ({ schedule }) => {
           <FaTrashAlt className="fa-icon-size" />
         </button>
       </div>
-      {today === dateTime && (<p className="is-today">Tepat hari ini</p>)}
+      {showFormattedDate(today) === showFormattedDate(dateTime) && (<p className="is-today">Tepat hari ini</p>)}
     </div>
   );
 };
