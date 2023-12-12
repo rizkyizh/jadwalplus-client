@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { FaCheckCircle, FaTrashAlt, FaEdit } from 'react-icons/fa';
+import {
+  FaCheckCircle, FaTrashAlt, FaEdit, FaClock, FaPen,
+} from 'react-icons/fa';
 import { asyncFinishedSchedule, asyncDeleteSchedule } from '../states/schedules/action';
 import showFormattedDate from '../utils/showFormattedDate';
 import './styles/schedule-style.css';
@@ -24,12 +26,12 @@ const ScheduleItem = ({ schedule }) => {
   return (
     <div className="schedule-container">
       <h4 id="schedule-text">{schedule.schedule}</h4>
-      <p className="greyText">
-        <span>Waktu : </span>
+      <p className="greyText container-icon-text">
+        <FaClock className="fa-icon-size" />
         {showFormattedDate(schedule.dateTime)}
       </p>
-      <p className="greyText">
-        <span>Dibuat pada : </span>
+      <p className="greyText container-icon-text">
+        <FaPen className="fa-icon-size" />
         {showFormattedDate(schedule.createdAt)}
       </p>
       <div className="container-check">

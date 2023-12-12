@@ -63,7 +63,7 @@ body {
 }
 
 .fa-icon-size {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .container-check {
@@ -109,4 +109,10 @@ body {
 .container-space {
   display: grid;
   row-gap: 2rem;
+}
+
+.container-icon-text {
+  display: flex;
+  gap: .7rem;
+  align-items: center;
 }
