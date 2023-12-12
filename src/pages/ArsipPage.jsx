@@ -27,13 +27,16 @@ const ArsipPage = () => {
   };
 
   useEffect(() => {
-    dispatch(asyncGetAllSchedule(searchKeyword));
-  }, [dispatch, search]);
+    dispatch(asyncGetAllSchedule());
+  }, [dispatch]);
+
+  const filteredSchedules = schedules
+    .filter((schedule) => schedule.schedule.toLowerCase().includes(searchKeyword.toLowerCase()));
 
   return (
     <div className="bgimage py-8 container-space">
       <Search searchKeyword={searchKeyword} onSearch={searchKeywordChangeHandler} />
-      <ArsipList schedules={schedules} />
+      <ArsipList schedules={filteredSchedules} />
     </div>
   );
 };
