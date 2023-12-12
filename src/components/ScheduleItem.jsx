@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import {
-  FaCheckCircle, FaTrashAlt, FaEdit, FaClock, FaPen,
+  FaRegSquare, FaCheckSquare, FaTrashAlt, FaEdit, FaClock, FaPen,
 } from 'react-icons/fa';
 import { asyncFinishedSchedule, asyncDeleteSchedule } from '../states/schedules/action';
+import { asyncGetDetailSchedule } from '../states/detailSchedule/action';
 import showFormattedDate from '../utils/showFormattedDate';
 import './styles/schedule-style.css';
 
 const ScheduleItem = ({ schedule }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const finishedSchedule = (id) => {
     dispatch(asyncFinishedSchedule(id));
@@ -18,6 +20,11 @@ const ScheduleItem = ({ schedule }) => {
 
   const deleteSchedule = (id) => {
     dispatch(asyncDeleteSchedule(id));
+  };
+
+  const handleDetail = (id) => {
+    dispatch(asyncGetDetailSchedule(id));
+    navigate(`/schedule/edit/${id}`);
   };
 
   const today = new Date().toISOString().split('T')[0];
@@ -36,14 +43,18 @@ const ScheduleItem = ({ schedule }) => {
       </p>
       <div className="container-check">
         <button id="btn-check-item" type="button" aria-label="checklist-btn" onClick={() => finishedSchedule(schedule.id)}>
-          <FaCheckCircle className={`fa-icon-size ${schedule.finished ? 'bg-green' : 'bg-gray'}`} />
+          {
+            schedule.finished
+              ? (<FaCheckSquare className={`fa-icon-size ${schedule.finished ? 'bg-green' : 'bg-gray'}`} />)
+              : (<FaRegSquare className={`fa-icon-size ${schedule.finished ? 'bg-green' : 'bg-gray'}`} />)
+          }
         </button>
         <p>{schedule.finished ? 'Selesai' : 'Belum selesai'}</p>
       </div>
       <div className="container-check-editDelete">
-        <Link to={`/schedule/edit/${schedule.id}`}>
+        <button type="button" aria-label="btn-edit" onClick={() => handleDetail(schedule.id)}>
           <FaEdit id="btn-edit" className="fa-icon-size" />
-        </Link>
+        </button>
         <button id="btn-delete" type="button" aria-label="delete-btn" onClick={() => deleteSchedule(schedule.id)}>
           <FaTrashAlt className="fa-icon-size" />
         </button>
