@@ -20,7 +20,7 @@ import { asyncUnsetAuthUser } from './states/authUser/action';
 
 const App = () => {
   const {
-    authUser = false,
+    authUser = null,
     isPreload = false,
   } = useSelector((states) => states);
 

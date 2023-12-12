@@ -94,13 +94,6 @@ body {
   font-size: 1.2rem;
 }
 
-.is-today {
-  font-size: 1rem;
-  color: limegreen;
-  margin-top: 1rem;
-  font-weight: 700;
-}
-
 .py-8 {
   padding: 2rem 0;
 }

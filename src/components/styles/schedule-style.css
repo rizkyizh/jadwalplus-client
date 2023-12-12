@@ -4,12 +4,43 @@
   margin: 0 auto;
   margin-top: 1rem;
   padding: 1rem;
-  border: 1px solid #B7B1B1;
-  box-shadow: 0px 4px 4px 0px #000000BF;
+  box-shadow: 0px 0px 11px 3px rgba(173, 163, 163, 0.66);
+}
+
+.schedule-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6em;
+}
+
+.is-today {
+  font-size: smaller;
+  border-radius: 12px;
+  padding: 6px;
+  opacity: 0.8;
+  background-color: greenyellow;
+  height: 36px;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .greyText{
   color: #877E82;
+}
+
+.dateTime-container{
+  margin-top: .6em;
+}
+
+.container-icon-text {
+  display: flex;
+  gap: .7rem;
+  align-items: center;
+  font-size: 14px;
+}
+
+.schedule-icon{
+  margin-left: 4px;
 }
 
 button{
@@ -17,39 +48,50 @@ button{
   border: none;
 }
 
-#btn-edit{
-  color: rgb(8, 175, 8);
-  cursor: pointer;
-}
-
-#btn-edit :hover{
-  color: rgb(12, 125, 12);
-}
-
-#btn-delete{
-  color: red;
-  cursor: pointer;
-  margin-left: 2em;
-}
-
-#btn-delete :hover{
-  color: rgb(171, 10, 10);
-}
-
-#btn-check-item :hover{
-  color: rgb(8, 91, 8);
-  cursor: pointer;
-}
-
 .container-check{
   margin: 0.5em;
   margin-left: 0;
 }
 
-.container-check-editDelete button{
-  margin-right: 2em;
-  margin-left: 0;
+.container-check-editDelete{
+  display: flex;
+  justify-content: space-between;
+  margin-top: .8em;
 }
+
+.container-editDelete{
+  display: flex;
+}
+
+.container-editDelete button{
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.editDelete-icon{
+  margin-right: 4px;
+}
+
+#btn-edit{
+  min-width: 5em;
+  background-color: greenyellow;
+  font-size: smaller;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#btn-delete{
+  border: 2.5px solid red;
+  padding: 6px;
+  color: red;
+  font-size: smaller;
+  font-weight:bolder;
+}
+
+/* #btn-delete :hover{
+  background: red;
+  color:white;
+} */
 
 #emptySchedule{
   justify-content: center;
