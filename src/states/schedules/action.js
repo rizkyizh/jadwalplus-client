@@ -1,3 +1,4 @@
+import { showLoading, hideLoading } from 'react-redux-loading-bar';
 import api from '../../utils/network-data';
 
 const ActionType = {
@@ -68,50 +69,68 @@ const updateScheduleActionCreator = ({ id, schedule, dateTime }) => {
 
 const asyncGetAllSchedule = () => {
   return async (dispatch) => {
+    dispatch(showLoading());
+
     try {
       const schedules = await api.getAllSchedule();
       dispatch(receiveSchedulesActionCreator(schedules));
     } catch (error) {
       alert(error.message);
     }
+
+    dispatch(hideLoading());
   };
 };
 
 const asyncAddSchedule = ({ schedule, dateTime }) => {
   return async (dispatch) => {
+    dispatch(showLoading());
+
     try {
       const newSchedule = await api.addSchedule({ schedule, dateTime });
       dispatch(addScheduleActionCreator(newSchedule));
     } catch (error) {
       alert(error.message);
     }
+
+    dispatch(hideLoading());
   };
 };
 
 const asyncFinishedSchedule = (scheduleId) => {
   return async (dispatch) => {
+    dispatch(showLoading());
+
     try {
       const { id, finished } = await api.finishedSchedule(scheduleId);
       dispatch(finishedScheduleActionCreator(id, finished));
     } catch (error) {
       alert(error.message);
     }
+
+    dispatch(hideLoading());
   };
 };
 
 const asyncDeleteSchedule = (scheduleId) => {
   return async (dispatch) => {
+    dispatch(showLoading());
+
     try {
       const id = await api.deleteSchedule(scheduleId);
       dispatch(deleteScheduleActionCreator(id));
     } catch (error) {
       alert(error.message);
     }
+
+    dispatch(hideLoading());
   };
 };
 
 const asyncUpdateSchedule = ({ id, schedule, dateTime }) => {
   return async (dispatch) => {
+    dispatch(showLoading());
+
     try {
       const newSchedule = await api.updateSchedule({ id, schedule, dateTime });
       dispatch(updateScheduleActionCreator({
@@ -122,6 +141,8 @@ const asyncUpdateSchedule = ({ id, schedule, dateTime }) => {
     } catch (error) {
       alert(error.message);
     }
+
+    dispatch(hideLoading());
   };
 };
 

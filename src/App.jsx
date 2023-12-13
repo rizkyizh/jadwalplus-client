@@ -15,6 +15,7 @@ import ArsipPage from './pages/ArsipPage';
 import JadwalPage from './pages/JadwalPage';
 import EditPage from './pages/EditPage';
 import UserAccount from './pages/UserAccount';
+import Loading from './components/Loading';
 import { asyncPreloadProcess } from './states/isPreload/action';
 import { asyncUnsetAuthUser } from './states/authUser/action';
 
@@ -43,34 +44,40 @@ const App = () => {
 
   if (authUser === null) {
     return (
-      <div className="min-height-100">
-        { path !== '/register' && path !== '/' && <Header /> }
-        <main>
-          <Routes>
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/*" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/JadwalPage" element={<JadwalPage />} />
-          </Routes>
-        </main>
-        { path !== '/register' && path !== '/' && <Footer /> }
-      </div>
+      <>
+        <Loading />
+        <div className="min-height-100">
+          {path !== '/register' && path !== '/' && <Header />}
+          <main>
+            <Routes>
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/*" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/JadwalPage" element={<JadwalPage />} />
+            </Routes>
+          </main>
+          {path !== '/register' && path !== '/' && <Footer />}
+        </div>
+      </>
     );
   }
 
   return (
-    <div className="min-height-100">
-      <NavigationTop authUser={authUser} />
-      <Routes>
-        <Route path="/" element={<Beranda />} />
-        <Route path="/schedules/arsip" element={<ArsipPage />} />
-        <Route path="/schedule/add" element={<AddSchedulePage />} />
-        <Route path="/schedule/edit/:id" element={<EditPage />} />
-        <Route path="/user/setting" element={<UserAccount />} />
-      </Routes>
-      <NavigationBottom logout={onLogout} />
-    </div>
+    <>
+      <Loading />
+      <div className="min-height-100">
+        <NavigationTop authUser={authUser} />
+        <Routes>
+          <Route path="/" element={<Beranda />} />
+          <Route path="/schedules/arsip" element={<ArsipPage />} />
+          <Route path="/schedule/add" element={<AddSchedulePage />} />
+          <Route path="/schedule/edit/:id" element={<EditPage />} />
+          <Route path="/user/setting" element={<UserAccount />} />
+        </Routes>
+        <NavigationBottom logout={onLogout} />
+      </div>
+    </>
   );
 };
 

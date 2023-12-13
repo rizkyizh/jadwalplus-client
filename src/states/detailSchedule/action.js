@@ -1,3 +1,4 @@
+import { showLoading, hideLoading } from 'react-redux-loading-bar';
 import api from '../../utils/network-data';
 
 const ActionType = {
@@ -32,13 +33,17 @@ const updateDetailScheduleActionCreator = ({ schedule, dateTime }) => {
 
 const asyncGetDetailSchedule = (id) => {
   return async (dispatch) => {
+    dispatch(showLoading());
     dispatch(clearDetailScheduleActionCreator());
+
     try {
       const detailSchedule = await api.getSchedule(id);
       dispatch(getDetailScheduleActionCreator(detailSchedule));
     } catch (error) {
       alert(error.message);
     }
+
+    dispatch(hideLoading());
   };
 };
 

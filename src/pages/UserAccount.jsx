@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { FaUserLock } from 'react-icons/fa';
 import useInput from '../hooks/useInput';
 import { asyncUpdatePassword, asyncDeleteUser } from '../states/users/action';
 import './styles/userAcc-style.css';
+import '../components/styles/schedule-style.css';
 
 const UserAccount = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [oldPassword, setOldPassword] = useInput('');
   const [newPassword, setNewPassword] = useInput('');
+  const [isDeleteConfirmationVisible, setDeleteConfirmationVisibility] = useState(false);
 
   const updateHandler = (event) => {
     event.preventDefault();
@@ -21,12 +23,33 @@ const UserAccount = () => {
   };
 
   const deleteHandler = () => {
-    dispatch(asyncDeleteUser());
-    navigate('/home');
+    if (isDeleteConfirmationVisible) {
+      dispatch(asyncDeleteUser());
+      setDeleteConfirmationVisibility(false);
+      navigate('/home');
+    } else {
+      setDeleteConfirmationVisibility(true);
+    }
   };
 
   return (
     <div className="userPage-container w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
+      {isDeleteConfirmationVisible && (
+        <div>
+          <div className="delete-confirmation-overlay" />
+          <div className="delete-confirmation w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
+            <h4>Menghapus Akun</h4>
+            <p>Apakah Kamu Yakin Menghapus Akun?</p>
+            <div className="delete-warning">
+              <div className="warning-text-container" />
+            </div>
+            <div className="confirmation-buttons">
+              <button type="button" onClick={deleteHandler}>Ya</button>
+              <button type="button" onClick={() => setDeleteConfirmationVisibility(false)}>Tidak</button>
+            </div>
+          </div>
+        </div>
+      )}
       <FaUserLock id="lock-img" className="fa-icon-size" size="8em" />
       <form onSubmit={updateHandler} id="formSubmit">
         <input

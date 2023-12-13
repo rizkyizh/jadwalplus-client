@@ -21,7 +21,6 @@ const EditSchedulePage = () => {
   };
 
   const navigate = useNavigate();
-  // const dateTimeFormate = new Date(detailSchedule?.dateTime).toISOString().split('T')[0];
   const dateTimeFormated = moment(detailSchedule?.dateTime).format('YYYY-MM-DD');
 
   const submitHandler = (event) => {
@@ -33,7 +32,11 @@ const EditSchedulePage = () => {
       id: detailSchedule.id, schedule: detailSchedule.schedule, dateTime: formatDateTime,
     }));
 
-    navigate('/');
+    if (detailSchedule.finished) {
+      navigate('/schedules/arsip');
+    } else {
+      navigate('/');
+    }
   };
 
   const minToday = () => {

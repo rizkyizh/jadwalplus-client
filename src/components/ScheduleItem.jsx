@@ -48,7 +48,7 @@ const ScheduleItem = ({ schedule }) => {
               <div className="warning-text-container" />
             </div>
             <div className="confirmation-buttons">
-              <button type="button" onClick={() => deleteSchedule(schedule.id)}>Iya</button>
+              <button type="button" onClick={() => deleteSchedule(schedule.id)}>Ya</button>
               <button type="button" onClick={() => setDeleteConfirmationVisibility(false)}>Tidak</button>
             </div>
           </div>
