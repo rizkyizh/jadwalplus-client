@@ -6,12 +6,7 @@ const ScheduleList = ({ schedules }) => {
   const activeScheduleLength = schedules.filter((schedule) => !schedule.finished).length;
 
   return (
-    <div
-      style={{
-        display: 'flex', flexDirection: 'column', gap: '1rem', justifyContent: 'center', alignItems: 'center', fontSize: 'larger',
-      }}
-      className="margin-bottom-4rem"
-    >
+    <div className="flex flex-col gap-4 justify-center items-center text-lg mb-20">
       {
         activeScheduleLength
           ? schedules.map((schedule) => !schedule.finished && (

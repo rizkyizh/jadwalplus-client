@@ -33,7 +33,7 @@ const Beranda = () => {
     .filter((schedule) => schedule.schedule.toLowerCase().includes(searchKeyword.toLowerCase()));
 
   return (
-    <div className="bgimage py-8 container-space">
+    <div className="py-8 container-space">
       <Search searchKeyword={searchKeyword} onSearch={searchKeywordChangeHandler} />
       <ScheduleList schedules={filteredSchedules} />
     </div>

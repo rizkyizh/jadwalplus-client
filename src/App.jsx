@@ -66,7 +66,7 @@ const App = () => {
   return (
     <>
       <Loading />
-      <div className="min-height-100">
+      <div className="min-height-100 bg-[#F3EEEA]">
         <NavigationTop authUser={authUser} />
         <Routes>
           <Route path="/" element={<Beranda />} />

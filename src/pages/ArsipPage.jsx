@@ -34,7 +34,7 @@ const ArsipPage = () => {
     .filter((schedule) => schedule.schedule.toLowerCase().includes(searchKeyword.toLowerCase()));
 
   return (
-    <div className="bgimage py-8 container-space">
+    <div className="py-8 container-space">
       <Search searchKeyword={searchKeyword} onSearch={searchKeywordChangeHandler} />
       <ArsipList schedules={filteredSchedules} />
     </div>
