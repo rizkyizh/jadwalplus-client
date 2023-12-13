@@ -2,6 +2,7 @@ import api from '../../utils/network-data';
 
 const ActionType = {
   SCHEDULES_DETAIL: 'SCHEDULES_DETAIL',
+  SCHEDULES_DETAIL_UPDATE: 'SCHEDULES_DETAIL_UPDATE',
   SCHEDULES_CLEAR_DETAIL: 'SCHEDULES_CLEAR_DETAIL',
 };
 
@@ -17,6 +18,15 @@ const getDetailScheduleActionCreator = (detailSchedule) => {
 const clearDetailScheduleActionCreator = () => {
   return {
     type: ActionType.SCHEDULES_CLEAR_DETAIL,
+  };
+};
+
+const updateDetailScheduleActionCreator = ({ schedule, dateTime }) => {
+  return {
+    type: ActionType.SCHEDULES_DETAIL_UPDATE,
+    payload: {
+      schedule, dateTime,
+    },
   };
 };
 
@@ -37,4 +47,5 @@ export {
   getDetailScheduleActionCreator,
   clearDetailScheduleActionCreator,
   asyncGetDetailSchedule,
+  updateDetailScheduleActionCreator,
 };

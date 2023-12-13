@@ -66,10 +66,10 @@ const updateScheduleActionCreator = ({ id, schedule, dateTime }) => {
   };
 };
 
-const asyncGetAllSchedule = (search = '') => {
+const asyncGetAllSchedule = () => {
   return async (dispatch) => {
     try {
-      const schedules = await api.getAllSchedule(search);
+      const schedules = await api.getAllSchedule();
       dispatch(receiveSchedulesActionCreator(schedules));
     } catch (error) {
       alert(error.message);

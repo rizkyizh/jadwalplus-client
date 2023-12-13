@@ -26,13 +26,16 @@ const Beranda = () => {
   };
 
   useEffect(() => {
-    dispatch(asyncGetAllSchedule(searchKeyword));
-  }, [dispatch, search]);
+    dispatch(asyncGetAllSchedule());
+  }, [dispatch]);
+
+  const filteredSchedules = schedules
+    .filter((schedule) => schedule.schedule.toLowerCase().includes(searchKeyword.toLowerCase()));
 
   return (
     <div className="bgimage py-8 container-space">
       <Search searchKeyword={searchKeyword} onSearch={searchKeywordChangeHandler} />
-      <ScheduleList schedules={schedules} />
+      <ScheduleList schedules={filteredSchedules} />
     </div>
   );
 };
