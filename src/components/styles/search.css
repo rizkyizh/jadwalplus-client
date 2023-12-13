@@ -5,7 +5,6 @@
   display: flex;
   column-gap: 1rem;
   padding: 0 1rem;
-  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
@@ -13,10 +12,24 @@
 }
 
 .search-input {
-  padding: 1rem;
+  padding: 0.8rem; /* Sesuaikan proporsi padding agar ukuran tetap */
   font-size: 1rem;
+  width: 100%;
+  border: none;
+  outline: none;
 }
 
 .search-icon {
   font-size: 1.2rem;
+}
+
+/* Gaya tambahan untuk memberi efek pada input saat di-fokus */
+.search-input:focus {
+  border: 1px solid #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Gaya tambahan untuk menangani kasus ketika hasil pencarian tidak ditemukan */
+.search-not-found {
+  animation: none; /* Menonaktifkan animasi ketika hasil pencarian tidak ditemukan */
 }

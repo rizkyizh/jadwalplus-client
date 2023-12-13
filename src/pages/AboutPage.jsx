@@ -9,11 +9,11 @@ const AboutPage = () => {
         <img
           src="./image/task1.png"
           alt="Ilustrasi JadwalPlus"
-          className="about-image"
+          className="about-image1"
         />
         <div>
           <h4 className="about-heading">JadwalPlus</h4>
-          <p className="about-text">
+          <p className="about-text1">
             JadwalPlus mengajak kepada pengguna untuk mengatur jadwal lebih efisien,
             memenejemen waktu lebih mudah lagi. Tujuan utama dari JadwalPlus sendiri
             yaitu untuk mentracking aktivitas sehari-hari, terutama dalam era modern
@@ -30,13 +30,13 @@ const AboutPage = () => {
           {/* Kotak 1 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image" />
+              <img src="./image/amin3.png" alt="Foto kevin" className="member-image photo" />
               <h4>Munawar</h4>
               <p>(Front end & UI/UX)</p>
             </div>
             <div className="social-icons">
               <a
-                href="https://www.instagram.com/munawar_amin2/"
+                href="https://www.instagram.com/munawar_kevin2/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="instagram-account"
@@ -44,7 +44,7 @@ const AboutPage = () => {
                 <FaInstagram />
               </a>
               <a
-                href="https://github.com/munawaramin2002"
+                href="https://github.com/munawarkevin2002"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="github-account"
@@ -52,7 +52,7 @@ const AboutPage = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/munawar-amin-734a06298/"
+                href="https://www.linkedin.com/in/munawar-kevin-734a06298/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="linkedin-account"
@@ -64,13 +64,13 @@ const AboutPage = () => {
           {/* Kotak 2 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image" />
+              <img src="./image/amin3.png" alt="Foto kevin" className="member-image photo" />
               <h4>Restu</h4>
               <p>(Front end & UI/UX)</p>
             </div>
             <div className="social-icons">
               <a
-                href="https://www.instagram.com/munawar_amin2/"
+                href="https://www.instagram.com/munawar_kevin2/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="instagram-account"
@@ -98,7 +98,7 @@ const AboutPage = () => {
           {/* Kotak 3 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image" />
+              <img src="./image/amin3.png" alt="Foto kevin" className="member-image photo" />
               <h4>Ade Lintang</h4>
               <p>(Front end & back end)</p>
             </div>
@@ -125,7 +125,7 @@ const AboutPage = () => {
           {/* Kotak 4 */}
           <div className="member-box">
             <div className="member-content">
-              <img id="kevin-photo" src="./image/kevin.jpeg" alt="Foto Kevin" className="member-image" />
+              <img id="kevin-photo" src="./image/kevin.jpeg" alt="Foto Kevin" className="member-image photo" />
               <h4>Kevin</h4>
               <p>(Front end & UI/UX)</p>
             </div>
@@ -152,7 +152,7 @@ const AboutPage = () => {
           {/* Kotak 5 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin.jpg" alt="Foto Amin" className="member-image" />
+              <img src="./image/kevin.jpeg" alt="Foto kevin" className="member-image photo" />
               <h4>Alul</h4>
               <p>(Front end & back end)</p>
             </div>

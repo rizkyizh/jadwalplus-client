@@ -45,7 +45,7 @@ const UserAccount = () => {
         />
         <button id="userPage-btn" type="submit">Ubah Password</button>
       </form>
-      <button id="userPage-btn" type="button" onClick={deleteHandler}>
+      <button id="userPage-btn1" type="button" onClick={deleteHandler}>
         Hapus Akun
       </button>
     </div>

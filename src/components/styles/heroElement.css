@@ -50,7 +50,120 @@ button:active {
   height: 400px;
   position: absolute;
   bottom:15%; 
-  left: 70%; 
+  left: 74%; 
   transform: translateX(-50%);
   z-index: 1; 
+}
+
+/* new */
+h2 {
+  color: #112049;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 180px;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+h2::after {
+  content: ""; 
+  display: block; 
+  border-bottom: 2px solid#708CD5;
+  width: 350px;
+  position: absolute; 
+  margin-top: -40px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  padding-bottom: 50px; 
+}
+
+h3 {
+  position: relative;
+  color:#0D3298;
+  margin-right: 10px;
+}
+
+h3::before {
+  content: attr(data-section-counter); 
+  display: inline-block;
+  width: 40px; 
+  height: 40px;
+  background-color: 
+  #1F3C88; 
+  color: white;
+  font-size: 18px; 
+  line-height: 40px; 
+  text-align: center;
+  border-radius: 50%; 
+  margin-right: 15px; 
+  position: absolute;
+  left: -60px; 
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+h3[data-section-counter="1"] {
+  margin-bottom: 5px; 
+}
+
+h3[data-section-counter="2"] {
+    margin-bottom: 5px;
+}
+
+h3[data-section-counter="3"] {
+    margin-bottom: 5px;
+}
+
+.p1 {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  line-height: 5;
+  margin-left: 80px; 
+  color: black;
+}
+
+.center-box {
+  width: 75%; 
+  height: 80%; 
+  position: absolute;
+  margin-top: 28.5em; /*ngautr kotak biru*/
+  top: 100%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 10px;
+  background: #DEE4F1;
+  box-shadow: 2px 2px 2px 2px rgba(0.30, 0.30, 0.30, 0.30);
+}
+
+.about-text{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: justify;
+}
+
+
+.about-image {
+  margin-top: 450px;
+  max-width: 100%;
+}
+.about-image1 {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.about-text1{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: justify;
+}
+
+.about-text1 {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
+  margin: 15px 0px;
+  margin-left: 200px;
+  color: #000000;
+  margin-top: -20%;
 }
