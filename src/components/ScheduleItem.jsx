@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -13,13 +13,19 @@ import './styles/schedule-style.css';
 const ScheduleItem = ({ schedule }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [isDeleteConfirmationVisible, setDeleteConfirmationVisibility] = useState(false);
 
   const finishedSchedule = (id) => {
     dispatch(asyncFinishedSchedule(id));
   };
 
   const deleteSchedule = (id) => {
-    dispatch(asyncDeleteSchedule(id));
+    if (isDeleteConfirmationVisible) {
+      dispatch(asyncDeleteSchedule(id));
+      setDeleteConfirmationVisibility(false);
+    } else {
+      setDeleteConfirmationVisibility(true);
+    }
   };
 
   const handleDetail = (id) => {
@@ -32,6 +38,22 @@ const ScheduleItem = ({ schedule }) => {
 
   return (
     <div className="schedule-container">
+      {isDeleteConfirmationVisible && (
+        <div>
+          <div className="delete-confirmation-overlay" />
+          <div className="delete-confirmation">
+            <h4>Menghapus Jadwal</h4>
+            <p>Apakah Kamu Yakin Menghapus Jadwal?</p>
+            <div className="delete-warning">
+              <div className="warning-text-container" />
+            </div>
+            <div className="confirmation-buttons">
+              <button onClick={() => deleteSchedule(schedule.id)}>Iya</button>
+              <button onClick={() => setDeleteConfirmationVisibility(false)}>Tidak</button>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="schedule-title">
         <h4 id="schedule-text">{schedule.schedule}</h4>
         {showFormattedDate(today) === showFormattedDate(dateTime) && (<p className="is-today">Today</p>)}

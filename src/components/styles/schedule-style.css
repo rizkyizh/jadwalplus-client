@@ -3,9 +3,11 @@
   width: 700px;
   margin: 0 auto;
   margin-top: 1rem;
+  border-radius: 5px;
   padding: 1rem;
   box-shadow: 0px 0px 11px 3px rgba(173, 163, 163, 0.66);
 }
+
 
 .schedule-title {
   display: flex;
@@ -88,12 +90,72 @@ button{
   font-weight:bolder;
 }
 
-/* #btn-delete :hover{
-  background: red;
-  color:white;
-} */
-
 #emptySchedule{
   justify-content: center;
   align-items: center;
 }
+
+/* coba ae */
+.delete-confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.delete-confirmation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  color: black;
+  padding: 20px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 4px 8px 30px 0px rgba(0, 0, 0, 0.20), -8px -15px 30px 0px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  z-index: 1000;
+  
+}
+
+.delete-confirmation h4 {
+  margin-bottom: 10px;
+}
+
+.delete-confirmation p {
+  margin-bottom: 15px;
+}
+
+.delete-warning {
+  display: flex;
+  align-items: flex-start;
+  color: #BC4C2E;
+  margin-bottom: 15px;
+}
+
+
+
+.block-text {
+  display: block; 
+  margin-top: 5px;
+}
+
+
+.confirmation-buttons button {
+  margin: 0 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+.confirmation-buttons button:hover {
+  background-color: #333;
+}
+
