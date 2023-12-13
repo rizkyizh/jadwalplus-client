@@ -5,7 +5,7 @@ import './styles/header.css';
 const Header = () => {
   return (
     <header className="sticky-top">
-      <nav className="flex-col gap-4 lg:flex-row">
+      <nav className="flex-col gap-4 lg:flex-row py-4 px-[28.8px]">
         <div className="logo">
           <img src="/image/logo.png" alt="Logo" className="logo-image" />
           <span>JadwalPlus</span>

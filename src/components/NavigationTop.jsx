@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 const NavigationTop = ({ authUser }) => {
   return (
     <header className="sticky-top">
-      <nav>
+      <nav className="px-4">
         <div className="logo">
           <img src="/image/logo.png" alt="Logo" className="logo-image" />
           <span>JadwalPlus</span>
