@@ -4,7 +4,7 @@ import './styles/about.css';
 
 const AboutPage = () => {
   return (
-    <div className="about-container">
+    <div className="about-container mx-auto w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
       <div className="content">
         <img
           src="./image/task1.png"
@@ -30,7 +30,7 @@ const AboutPage = () => {
           {/* Kotak 1 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin3.png" alt="Foto kevin" className="member-image photo" />
+              <img src="./image/amin3.png" alt="Foto amin" className="member-image photo" />
               <h4>Munawar</h4>
               <p>(Front end & UI/UX)</p>
             </div>
@@ -64,13 +64,13 @@ const AboutPage = () => {
           {/* Kotak 2 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin3.png" alt="Foto kevin" className="member-image photo" />
+              <img src="./image/restums.jpg" alt="Foto restu" className="member-image photo" />
               <h4>Restu</h4>
               <p>(Front end & UI/UX)</p>
             </div>
             <div className="social-icons">
               <a
-                href="https://www.instagram.com/munawar_kevin2/"
+                href="https://www.instagram.com/restu_m.s/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="instagram-account"
@@ -98,12 +98,19 @@ const AboutPage = () => {
           {/* Kotak 3 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/amin3.png" alt="Foto kevin" className="member-image photo" />
-              <h4>Ade Lintang</h4>
+              <img src="./image/ade.jpg" alt="Foto Ade" className="member-image photo" />
+              <h4>Ade</h4>
               <p>(Front end & back end)</p>
             </div>
             <div className="social-icons">
-              <FaInstagram />
+              <a
+                href="https://www.instagram.com/im.adelintang/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="instagram-account"
+              >
+                <FaInstagram />
+              </a>
               <a
                 href="https://github.com/adelintang"
                 target="_blank"
@@ -130,7 +137,14 @@ const AboutPage = () => {
               <p>(Front end & UI/UX)</p>
             </div>
             <div className="social-icons">
-              <FaInstagram />
+              <a
+                href="https://www.instagram.com/munawar_kevin2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="instagram-account"
+              >
+                <FaInstagram />
+              </a>
               <a
                 href="https://github.com/blueskye16"
                 target="_blank"
@@ -152,14 +166,35 @@ const AboutPage = () => {
           {/* Kotak 5 */}
           <div className="member-box">
             <div className="member-content">
-              <img src="./image/kevin.jpeg" alt="Foto kevin" className="member-image photo" />
+              <img src="./image/alul.jpeg" alt="Foto kevin" className="member-image photo" />
               <h4>Alul</h4>
               <p>(Front end & back end)</p>
             </div>
             <div className="social-icons">
-              <FaInstagram />
-              <FaGithub />
-              <FaLinkedin />
+              <a
+                href="https://www.instagram.com/munawar_kevin2/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="instagram-account"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://github.com/blueskye16"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="github-account"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/fabianus-kevin-406285231/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="linkedin-account"
+              >
+                <FaLinkedin />
+              </a>
             </div>
           </div>
         </div>

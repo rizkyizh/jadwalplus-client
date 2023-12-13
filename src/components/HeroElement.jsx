@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './styles/heroElement.css';
 
 const CombinedComponent = () => {
@@ -16,9 +15,6 @@ const CombinedComponent = () => {
           <br />
           dengan JadwalPlus
         </p>
-        <Link to="/jadwalpage">
-          <button className="hire-btn" type="button">JadwalPlus</button>
-        </Link>
       </div>
       <img alt="model" className="model" src="/image/foto.jpeg" />
 

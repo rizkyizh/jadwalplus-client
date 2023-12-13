@@ -48,7 +48,7 @@ button:active {
 .model {
   height: 400px;
   position: absolute;
-  bottom: 15%;
+  bottom: 40%;
   left: 74%;
   transform: translateX(-50%);
   z-index: 1;
@@ -104,6 +104,12 @@ h3::before {
   margin-bottom: 20px;
 }
 
+.aboutText-points h2 {
+  margin-bottom: 20px;
+  font-weight: 900px;
+  font-size: 20px;
+}
+
 .aboutText-points p1 {
   margin-bottom: 20px;
 }
@@ -146,7 +152,8 @@ h3[data-section-counter="3"] {
 
 .about-text {
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
+  font-size: 17px;
+  font-weight: 700;
   text-align: justify;
 }
 

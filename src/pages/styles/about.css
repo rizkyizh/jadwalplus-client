@@ -2,16 +2,28 @@
   font-family: "Quicksand", sans-serif;
   line-height: 1.5;
   margin: 15px 0px;
-  margin-left: 200px;
+  margin-left: 170px;
+  text-align: justify;
   color: #000000;
-  margin-top: -17%;
+  margin-top: -20%;
+  padding: 10px;
+}
+
+.about-text1 {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.5;
+  margin: 15px 0px;
+  margin-left: 170px;
+  text-align: justify;
+  color: #000000;
+  margin-top: -27%;
   padding: 10px;
 }
 
 .about-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 30px;
 }
 
 
@@ -24,7 +36,7 @@
   font-size: 20px;
   line-height: 30px;
   text-align: left;
-  margin-left: 5%;
+  margin-left: 3%;
   margin-top: 30px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   font-style: italic;
@@ -34,7 +46,7 @@
 
 .team-section {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 100px;
 }
 
 .team-heading-container {
@@ -162,12 +174,13 @@
   margin: 20px 5px;
 }
 
-/* 
-  Photo
-
-*/
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+}
 
 .photo {
   object-fit: cover;
   object-position: center;
 }
+
