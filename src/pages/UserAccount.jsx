@@ -33,7 +33,7 @@ const UserAccount = () => {
   };
 
   return (
-    <div className="userPage-container w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
+    <div className="userPage-container w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] mt-10">
       {isDeleteConfirmationVisible && (
         <div>
           <div className="delete-confirmation-overlay" />
@@ -50,7 +50,7 @@ const UserAccount = () => {
           </div>
         </div>
       )}
-      <FaUserLock id="lock-img" className="fa-icon-size" size="8em" />
+      <FaUserLock id="lock-img" className="text-8xl mx-auto mb-4" />
       <form onSubmit={updateHandler} id="formSubmit">
         <input
           id="pasw-input"
