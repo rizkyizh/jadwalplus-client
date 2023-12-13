@@ -37,7 +37,7 @@ const ScheduleItem = ({ schedule }) => {
   const { dateTime } = schedule;
 
   return (
-    <div className="schedule-container">
+    <div className="schedule-container w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
       {isDeleteConfirmationVisible && (
         <div>
           <div className="delete-confirmation-overlay" />
@@ -48,8 +48,8 @@ const ScheduleItem = ({ schedule }) => {
               <div className="warning-text-container" />
             </div>
             <div className="confirmation-buttons">
-              <button onClick={() => deleteSchedule(schedule.id)}>Iya</button>
-              <button onClick={() => setDeleteConfirmationVisibility(false)}>Tidak</button>
+              <button type="button" onClick={() => deleteSchedule(schedule.id)}>Iya</button>
+              <button type="button" onClick={() => setDeleteConfirmationVisibility(false)}>Tidak</button>
             </div>
           </div>
         </div>

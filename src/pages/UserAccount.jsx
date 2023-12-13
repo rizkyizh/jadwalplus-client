@@ -26,7 +26,7 @@ const UserAccount = () => {
   };
 
   return (
-    <div className="userPage-container">
+    <div className="userPage-container w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%]">
       <FaUserLock id="lock-img" className="fa-icon-size" size="8em" />
       <form onSubmit={updateHandler} id="formSubmit">
         <input

@@ -5,7 +5,7 @@ import './styles/search.css';
 
 const Search = ({ searchKeyword, onSearch, searchNotFound }) => {
   return (
-    <form className={`search-container ${searchNotFound ? 'search-not-found' : ''}`}>
+    <form className={`search-container ${searchNotFound ? 'search-not-found' : ''} w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%]`}>
       <button type="submit" aria-label="search-btn">
         <FaSearch className="search-icon" />
       </button>
