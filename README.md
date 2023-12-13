@@ -14,6 +14,8 @@ Sebuah website yang melayani pengelolaan penjadwalan secara online.
 - Melihat penjadwalan yang belum di selesaikan ataupun sudah di selesaikan
 - Melihat status penjadwalan sudah mencapai harinya atau belum
 - Menghapus penjadwalan
+- Update Penjadwalan
+- Pencarian penjadwalan berdasarkan nama
 
 ## Teknologi yang di pakai
 
@@ -38,7 +40,12 @@ Sebuah website yang melayani pengelolaan penjadwalan secara online.
   ```
   npm install
   ```
-- Jalankan Project
+- Buat file .env yang berisi seperti file .env.example
+
+  ```
+  VITE_BASE_API_URL='YOUR API URL'
+  ```
+  Jalankan Project
 
   ```
   npm run dev

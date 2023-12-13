@@ -32,14 +32,13 @@ const NavigationBottom = ({ logout }) => {
         <div className="navigation-icon" id="add-book-icon">
           <Link to="/schedules/arsip" className="wrap-icon reset-link">
             <FaArchive className="icon-navigation-action" />
-            {' '}
-            <span className="icon-label">Arsip</span>
+            <span className="icon-label">Archive</span>
           </Link>
         </div>
         <div className="navigation-icon" id="logOut-icon">
           <button type="button" className="wrap-icon reset-button" onClick={logoutHandler}>
             <FaSignOutAlt className="icon-navigation-action" />
-            <span className="icon-label">Keluar</span>
+            <span className="icon-label">Logout</span>
           </button>
         </div>
       </div>
