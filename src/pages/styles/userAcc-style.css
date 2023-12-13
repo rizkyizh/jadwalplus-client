@@ -1,12 +1,7 @@
 .userPage-container {
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #F3EEEA;
   border-radius: 5px;
-}
-
-#lock-img {
-  margin-bottom: 20px;
-  margin-left: 6em;
 }
 
 #pasw-input {
@@ -14,6 +9,7 @@
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  background-color: #fff;
   margin-bottom: 10px;
 }
 

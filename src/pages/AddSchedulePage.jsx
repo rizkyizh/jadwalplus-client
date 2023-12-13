@@ -33,11 +33,11 @@ const AddSchedulePage = () => {
 
   return (
     <form
-      className="user-info-container bgimage"
+      className="user-info-container pt-8"
       onSubmit={submitHandler}
     >
-      <div className="site-name">Buat Jadwal Baru</div>
-      <div className="red-box">
+      <div className="site-name pb-5">Buat Jadwal Baru</div>
+      <div className="red-box w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] p-4">
         <div className="input-container">
           <input
             type="text"
@@ -49,7 +49,7 @@ const AddSchedulePage = () => {
             onChange={(e) => setSchedule(e.target.value)}
           />
         </div>
-        <div className="input-container">
+        <div className="input-container mt-4">
           <input
             type="date"
             id="tanggal"
@@ -59,9 +59,7 @@ const AddSchedulePage = () => {
             onChange={(e) => setDateTime(e.target.value)}
           />
         </div>
-        <div className="button-container">
-          <button id="simpanButton" className="save-button" type="submit">SIMPAN</button>
-        </div>
+        <button id="simpanButton" className="mt-8 bg-black text-white w-[100%] py-3 rounded" type="submit">SIMPAN</button>
       </div>
     </form>
   );

@@ -1,77 +1,27 @@
-.site-name {
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  right:270px;
-  color: black; 
-  margin-bottom: 10px; 
-  position: relative;
-  top: -540px; 
-
-}
-
-
 .user-info-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding: 20px;
-  top: 50px;
+  flex-direction: column;
+}
+
+.site-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: black; 
 }
 
 .red-box {
-  width: 60%;
-  height: 250px;
   background-color: white;
-  margin: 10% auto;
-  position: absolute;
-  top: -1%;
-  z-index: 1;
   border-radius: 5px;
   border: 1px solid #B7B1B1;
   box-shadow: 0px 0px 11px 3px rgba(173, 163, 163, 0.66);
 }
 
-.input-container {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
 .input-container input {
-  width: 80%;
+  width: 100%;
   padding: 12px;
-  margin: 0 auto;
-  margin-bottom: -10px;
   background-color: white;
   border: 1px solid #000; 
   border-radius: 5px;
-}
-.input-container textarea {
-  width: 80%;
-  padding: 60px;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  background-color: white;
-  border: 1px solid #000; 
-  border-radius: 5px;
-  resize: vertical; 
-  line-height: 1.5; 
-  text-align: center; 
-}
-
-.button-container {
-  text-align: center;
-}
-
-.save-button {
-  background-color: #0b0b0b;
-  color: #ffffff;
-  font-weight: bold;
-  padding: 12px 36%;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 5%;
 }

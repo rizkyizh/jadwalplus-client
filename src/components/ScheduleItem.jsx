@@ -68,7 +68,7 @@ const ScheduleItem = ({ schedule }) => {
           {showFormattedDate(schedule.createdAt)}
         </p>
       </div>
-      <div className="mt-8 flex justify-between">
+      <div className="mt-10 flex justify-between">
         <div className="flex gap-1 items-start flex-col sm:flex-row sm:items-center">
           <button id="btn-check-item" type="button" aria-label="checklist-btn" onClick={() => finishedSchedule(schedule.id)}>
             {
@@ -80,13 +80,13 @@ const ScheduleItem = ({ schedule }) => {
           <p className="text-sm sm:text-base">{schedule.finished ? 'Selesai' : 'Belum selesai'}</p>
         </div>
         <div className="flex gap-2">
-          <button className="rounded flex items-center gap-2" id="btn-edit" type="button" aria-label="btn-edit" onClick={() => handleDetail(schedule.id)}>
+          <button className="rounded flex items-center justify-center gap-1.5" id="btn-edit" type="button" aria-label="btn-edit" onClick={() => handleDetail(schedule.id)}>
             <FaEdit id="btn-edit-icon" className="fa-icon-size editDelete-icon" size="16px" />
-            <span>EDIT</span>
+            <span className="text-sm">EDIT</span>
           </button>
-          <button className="rounded flex items-center gap-2" id="btn-delete" type="button" aria-label="delete-btn" onClick={() => deleteSchedule(schedule.id)}>
+          <button className="rounded flex items-center justify-center gap-1.5" id="btn-delete" type="button" aria-label="delete-btn" onClick={() => deleteSchedule(schedule.id)}>
             <FaTrashAlt id="btn-delete-icon" className="fa-icon-size editDelete-icon" size="16px" />
-            <span>DELETE</span>
+            <span className="text-sm">DELETE</span>
           </button>
         </div>
       </div>
