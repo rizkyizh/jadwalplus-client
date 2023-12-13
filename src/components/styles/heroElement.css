@@ -5,14 +5,14 @@
   transform: translate(-50%, -50%);
 }
 .text-container p:nth-child(1) {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #403e3e;
   font-size: 30px;
   line-height: 30px;
 }
 
 .text-container p:nth-child(2) {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #403e3e;
   font-size: 17px;
   margin-top: 10px;
@@ -24,12 +24,11 @@
   margin: 15px 0px;
 }
 
-
 .text-container button {
   width: 130px;
   height: 42px;
   border-radius: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-size: 14px;
   outline: none;
@@ -49,13 +48,12 @@ button:active {
 .model {
   height: 400px;
   position: absolute;
-  bottom:15%; 
-  left: 74%; 
+  bottom: 15%;
+  left: 74%;
   transform: translateX(-50%);
-  z-index: 1; 
+  z-index: 1;
 }
 
-/* new */
 h2 {
   color: #112049;
   font-size: 20px;
@@ -67,94 +65,108 @@ h2 {
 }
 
 h2::after {
-  content: ""; 
-  display: block; 
+  content: "";
+  display: block;
   border-bottom: 2px solid#708CD5;
   width: 350px;
-  position: absolute; 
-  margin-top: -40px; 
-  left: 50%; 
+  position: absolute;
+  margin-top: -40px;
+  left: 50%;
   transform: translateX(-50%);
-  padding-bottom: 50px; 
+  padding-bottom: 50px;
 }
 
 h3 {
   position: relative;
-  color:#0D3298;
+  color: #0d3298;
   margin-right: 10px;
 }
 
 h3::before {
-  content: attr(data-section-counter); 
+  content: attr(data-section-counter);
   display: inline-block;
-  width: 40px; 
+  width: 40px;
   height: 40px;
-  background-color: 
-  #1F3C88; 
+  background-color: #1f3c88;
   color: white;
-  font-size: 18px; 
-  line-height: 40px; 
+  font-size: 18px;
+  line-height: 40px;
   text-align: center;
-  border-radius: 50%; 
-  margin-right: 15px; 
+  border-radius: 50%;
+  margin-right: 15px;
   position: absolute;
-  left: -60px; 
+  left: -60px;
   top: 50%;
   transform: translateY(-50%);
 }
 
+.aboutText-points h3 {
+  margin-bottom: 20px;
+}
+
+.aboutText-points p1 {
+  margin-bottom: 20px;
+}
+
 h3[data-section-counter="1"] {
-  margin-bottom: 5px; 
+  margin-left: 80px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 h3[data-section-counter="2"] {
-    margin-bottom: 5px;
+  margin-bottom: 10px;
+  margin-left: 80px;
+  margin-top: 10px;
 }
 
 h3[data-section-counter="3"] {
-    margin-bottom: 5px;
+  margin-bottom: 10px;
+  margin-left: 80px;
+  margin-top: 10px;
 }
 
 .p1 {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-align: center;
   line-height: 5;
-  margin-left: 80px; 
+  margin-left: 80px;
   color: black;
 }
 
-.center-box {
-  width: 75%; 
-  height: 80%; 
-  position: absolute;
-  margin-top: 28.5em; /*ngautr kotak biru*/
-  top: 100%;
-  left: 47%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+.content-hero {
   border-radius: 10px;
-  background: #DEE4F1;
-  box-shadow: 2px 2px 2px 2px rgba(0.30, 0.30, 0.30, 0.30);
+  background: #dee4f1;
+  box-shadow: 2px 2px 2px 2px rgba(0.3, 0.3, 0.3, 0.3);
+  width: 1000px;
+  height: 100%;
+  position: relative;
+  right: 100px;
 }
 
-.about-text{
-  font-family: 'Poppins', sans-serif;
+.about-text {
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   text-align: justify;
 }
 
+.aboutText-points {
+  margin-top: 140px;
+  padding: 14px;
+}
 
 .about-image {
   margin-top: 450px;
   max-width: 100%;
+  padding: 20px;
 }
 .about-image1 {
   margin-top: 20px;
   max-width: 100%;
 }
 
-.about-text1{
-  font-family: 'Poppins', sans-serif;
+.about-text1 {
+  font-family: "Poppins", sans-serif;
   font-size: 15px;
   text-align: justify;
 }
@@ -166,4 +178,10 @@ h3[data-section-counter="3"] {
   margin-left: 200px;
   color: #000000;
   margin-top: -20%;
+}
+
+.text1{
+  display: block;
+  margin-left: 80px;
+  text-align: justify;
 }

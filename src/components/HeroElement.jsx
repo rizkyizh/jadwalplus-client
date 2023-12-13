@@ -23,7 +23,7 @@ const CombinedComponent = () => {
       <img alt="model" className="model" src="/image/foto.jpeg" />
 
       <div className="about-container">
-        <div className="content">
+        <div className="content-hero">
           <img
             src="./image/task1.png"
             alt="Ilustrasi JadwalPlus"
@@ -38,7 +38,7 @@ const CombinedComponent = () => {
               konteks yang lebih umum, JadwalPlus membantu orang untuk mengelola
               waktu mereka secara efisien dan efektif.
             </p>
-            <div>
+            <div className="aboutText-points">
               <h2>Keuntungan Menggunakan Aplikasi JadwalPlus</h2>
               <h3 data-section-counter="1">Efesian Waktu</h3>
               <p1 className="text1">
@@ -46,12 +46,12 @@ const CombinedComponent = () => {
                 kegiatan dengan lebih efisien.
               </p1>
               <h3 data-section-counter="2">Manajemen Stress</h3>
-              <p1>
+              <p1 className="text1">
                 Dengan memiliki JadwalPlus dapat mengurangi stres karena tahu apa
                 yang harus dilakukan dan kapan harus melakukannya.
               </p1>
               <h3 data-section-counter="3">Melacak Kemajuan Belajar</h3>
-              <p1>
+              <p1 className="text1">
                 Dengan aplikasi JadwalPlus, Dapat melacak kemajuan target
                 belajar. Ini membantu pengguna untuk tetap fokus dan termotivasi.
               </p1>
