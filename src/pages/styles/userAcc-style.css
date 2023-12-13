@@ -32,6 +32,15 @@
   cursor: pointer;
 }
 
+#userPage-btn1 {
+  width: 100%;
+  background-color: red;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 #userPage-btn:hover{
   background-color: #0250a3;
 }

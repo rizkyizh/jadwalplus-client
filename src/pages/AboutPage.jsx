@@ -9,11 +9,11 @@ const AboutPage = () => {
         <img
           src="./image/task1.png"
           alt="Ilustrasi JadwalPlus"
-          className="about-image"
+          className="about-image1"
         />
         <div>
           <h4 className="about-heading">JadwalPlus</h4>
-          <p className="about-text">
+          <p className="about-text1">
             JadwalPlus mengajak kepada pengguna untuk mengatur jadwal lebih efisien,
             memenejemen waktu lebih mudah lagi. Tujuan utama dari JadwalPlus sendiri
             yaitu untuk mentracking aktivitas sehari-hari, terutama dalam era modern
