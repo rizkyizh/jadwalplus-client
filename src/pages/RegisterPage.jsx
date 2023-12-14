@@ -20,50 +20,53 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="container">
-      <div className="form-box">
-        <div className="form-head">
+    <div className="w-[100%] bg-image-auth">
+      <div className="flex flex-col justify-around bg-white w-[100%] sm:w-[448px] sm:mx-auto p-6 min-h-screen">
+        <div className="flex items-center gap-10">
           <img src="/image/task1.png" alt="Task Icon" id="taskIcon" />
-          <h1>JadwalPlus</h1>
+          <h1 className="text-xl font-semibold">JadwalPlus</h1>
         </div>
-        <h1 id="title">Daftar ke JadwalPlus</h1>
+        <h1 id="title" className="my-6 text-center text-2xl">Daftar ke JadwalPlus</h1>
         <form onSubmit={submitHandler}>
-          <div className="input-group">
-            <div className="input-field">
-              <FaUser className="input-icon" />
-              <input
-                type="text"
-                placeholder="Nama pengguna"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </div>
-            <div className="input-field" id="emailField">
-              <FaEnvelope className="input-icon" />
-              <input
-                type="email"
-                placeholder="Email pengguna"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div className="input-field">
-              <FaLock className="input-icon" />
-              <input
-                type="password"
-                placeholder="Password pengguna"
-                id="mytanggal"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
+          <div className="input-field w-[100%]">
+            <FaUser className="input-icon" />
+            <input
+              type="text"
+              placeholder="username pengguna"
+              className="py-1"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </div>
-          <div id="signInContainer" className="signContainer">
-            <button type="submit" id="signinBtn" className="signBtn">Daftar</button>
-            <p>
-              Sudah memiliki akun?
+          <div className="input-field w-[100%]" id="emailField">
+            <FaEnvelope className="input-icon" />
+            <input
+              type="email"
+              placeholder="email pengguna"
+              className="py-1"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="input-field input-field w-[100%]">
+            <FaLock className="input-icon" />
+            <input
+              type="password"
+              placeholder="kata sandi"
+              id="mytanggal"
+              className="py-1"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div id="signInContainer" className="signContainer mt-10">
+            <button type="submit" id="signinBtn" className="bg-[#2845AB] w-[100%] py-2.5 rounded-full text-white hover:bg-blue-500">Daftar</button>
+            <section className="text-center mt-3">
+              <span>Sudah memiliki akun?</span>
               <Link to="/" id="signUpLink">Masuk</Link>
-            </p>
+              <span> /</span>
+              <Link to="/home">Home</Link>
+            </section>
           </div>
         </form>
       </div>
