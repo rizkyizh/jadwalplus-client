@@ -2,6 +2,8 @@
 
 Sebuah website yang melayani pengelolaan penjadwalan secara online.
 
+App : [JadwalPlus](https://jadwalplus-client.vercel.app/)
+
 ## Fitur yang di tawarkan
 
 - Registrasi
@@ -30,6 +32,9 @@ Sebuah website yang melayani pengelolaan penjadwalan secara online.
 
 ## Cara menjalankan secara lokal
 
+- Lakukan Clone dan setup API di repository
+
+  [JadwalPlus API](https://github.com/mengcapstone/jadwalplus-api)
 - Clone Repository
 
   ```
@@ -45,8 +50,6 @@ Sebuah website yang melayani pengelolaan penjadwalan secara online.
   ```
   VITE_BASE_API_URL='YOUR API URL'
   ```
-  Jalankan Project
-
   ```
   npm run dev
   ```

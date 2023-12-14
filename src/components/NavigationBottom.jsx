@@ -11,7 +11,7 @@ const NavigationBottom = ({ logout }) => {
 
   const logoutHandler = () => {
     logout();
-    navigate('/home');
+    navigate('/');
   };
 
   return (

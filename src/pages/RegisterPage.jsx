@@ -19,7 +19,7 @@ const RegisterPage = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(asyncRegisterUser({ email, username, password }));
-    navigate('/');
+    navigate('/login');
   };
 
   return (
@@ -78,9 +78,9 @@ const RegisterPage = () => {
             <button type="submit" id="signinBtn" className="bg-[#2845AB] w-[100%] py-2.5 rounded-full text-white hover:bg-blue-500">Daftar</button>
             <section className="text-center mt-3">
               <span>Sudah memiliki akun?</span>
-              <Link to="/" id="signUpLink">Masuk</Link>
+              <Link to="/login" id="signUpLink">Masuk</Link>
               <span> /</span>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </section>
           </div>
         </form>

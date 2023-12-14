@@ -30,7 +30,7 @@ const UserAccount = () => {
     if (isDeleteConfirmationVisible) {
       dispatch(asyncDeleteUser());
       setDeleteConfirmationVisibility(false);
-      navigate('/home');
+      navigate('/');
     } else {
       setDeleteConfirmationVisibility(true);
     }

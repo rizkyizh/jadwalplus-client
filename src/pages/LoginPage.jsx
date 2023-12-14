@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
 import { RiEyeLine } from 'react-icons/ri';
 import { BsFillEyeSlashFill } from 'react-icons/bs';
@@ -13,10 +13,12 @@ const LoginPage = () => {
   const [password, setPassword] = useInput('');
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(asyncSetAuthUser({ email, password }));
+    navigate('/');
   };
 
   return (
@@ -67,7 +69,7 @@ const LoginPage = () => {
               <span>Belum memiliki akun?</span>
               <Link to="/register" id="signUpLink">Daftar</Link>
               <span> /</span>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </section>
           </div>
         </form>
