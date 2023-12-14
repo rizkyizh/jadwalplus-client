@@ -11,6 +11,9 @@
   border: 1px solid #ccc;
   background-color: #fff;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #formSubmit{

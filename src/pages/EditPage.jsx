@@ -40,7 +40,7 @@ const EditSchedulePage = () => {
   };
 
   const minToday = () => {
-    return new Date().toISOString().split('T')[0];
+    return new Date().toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' }).split(',')[0].split('/').reverse().join('-');
   };
 
   if (!detailSchedule) {

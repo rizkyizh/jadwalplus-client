@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
+import { RiEyeLine } from 'react-icons/ri';
+import { BsFillEyeSlashFill } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import useInput from '../hooks/useInput';
 import { asyncSetAuthUser } from '../states/authUser/action';
@@ -9,6 +11,7 @@ import './styles/auth.css';
 const LoginPage = () => {
   const [email, setEmail] = useInput('');
   const [password, setPassword] = useInput('');
+  const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
 
   const submitHandler = (event) => {
@@ -35,16 +38,28 @@ const LoginPage = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="input-field w-[100%]">
+          <div className="input-field w-[100%] relative">
             <FaLock className="input-icon" />
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               placeholder="Kata Sandi"
               id="mytanggal"
               className="py-1"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            <button
+              type="button"
+              className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer"
+              onClick={() => setShowPassword(!showPassword)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') {
+                  setShowPassword(!showPassword);
+                }
+              }}
+            >
+              {showPassword ? <RiEyeLine /> : <BsFillEyeSlashFill />}
+            </button>
           </div>
           <div id="signInContainer" className="signContainer mt-16">
             <button type="submit" id="signinBtn" className="bg-[#2845AB] w-[100%] py-2.5 rounded-full text-white hover:bg-blue-500">Masuk</button>

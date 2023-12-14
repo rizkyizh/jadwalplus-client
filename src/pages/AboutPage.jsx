@@ -30,12 +30,12 @@ const AboutPage = () => {
           <div className="member-box">
             <div className="member-content">
               <img src="./image/amin3.png" alt="Foto amin" className="member-image photo" />
-              <h4>Munawar</h4>
-              <p>(Front end & UI/UX)</p>
+              <h4>Munawar Amin</h4>
+              <p>(Frontend & UI/UX)</p>
             </div>
             <div className="social-icons">
               <a
-                href="https://www.instagram.com/munawar_kevin2/"
+                href="https://www.instagram.com/munawar_amin2/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="instagram-account"
@@ -43,7 +43,7 @@ const AboutPage = () => {
                 <FaInstagram />
               </a>
               <a
-                href="https://github.com/munawarkevin2002"
+                href="https://github.com/munawaramin2002"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="github-account"
@@ -51,7 +51,7 @@ const AboutPage = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/munawar-kevin-734a06298/"
+                href="https://www.linkedin.com/in/munawar-amin/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="linkedin-account"
@@ -64,7 +64,7 @@ const AboutPage = () => {
             <div className="member-content">
               <img src="./image/restums.jpg" alt="Foto restu" className="member-image photo" />
               <h4>Restu</h4>
-              <p>(Front end & UI/UX)</p>
+              <p>(Frontend & UI/UX)</p>
             </div>
             <div className="social-icons">
               <a
@@ -96,8 +96,8 @@ const AboutPage = () => {
           <div className="member-box">
             <div className="member-content">
               <img src="./image/ade.jpg" alt="Foto Ade" className="member-image photo" />
-              <h4>Ade</h4>
-              <p>(Front end & back end)</p>
+              <h4>Ade Lintang</h4>
+              <p>(Frontend & Backend)</p>
             </div>
             <div className="social-icons">
               <a
@@ -130,11 +130,11 @@ const AboutPage = () => {
             <div className="member-content">
               <img id="kevin-photo" src="./image/kevin.jpeg" alt="Foto Kevin" className="member-image photo" />
               <h4>Kevin</h4>
-              <p>(Front end & UI/UX)</p>
+              <p>(Frontend)</p>
             </div>
             <div className="social-icons">
               <a
-                href="https://www.instagram.com/munawar_kevin2/"
+                href="https://www.instagram.com/fkvin_/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="instagram-account"
@@ -162,12 +162,12 @@ const AboutPage = () => {
           <div className="member-box">
             <div className="member-content">
               <img src="./image/alul.jpeg" alt="Foto kevin" className="member-image photo" />
-              <h4>Alul</h4>
-              <p>(Front end & back end)</p>
+              <h4>Hikmalul</h4>
+              <p>(Backend & DevOps)</p>
             </div>
             <div className="social-icons">
               <a
-                href="https://www.instagram.com/munawar_kevin2/"
+                href="https://www.instagram.com/hikmal_a.s/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="instagram-account"
@@ -175,7 +175,7 @@ const AboutPage = () => {
                 <FaInstagram />
               </a>
               <a
-                href="https://github.com/blueskye16"
+                href="https://github.com/MituBaby"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="github-account"
@@ -183,7 +183,7 @@ const AboutPage = () => {
                 <FaGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/fabianus-kevin-406285231/"
+                href="https://www.linkedin.com/in/hikmalul-a-la-978a07299/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="linkedin-account"

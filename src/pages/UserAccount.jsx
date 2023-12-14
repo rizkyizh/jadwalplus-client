@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { FaUserLock } from 'react-icons/fa';
+import { RiEyeLine } from 'react-icons/ri';
+import { BsFillEyeSlashFill } from 'react-icons/bs';
 import useInput from '../hooks/useInput';
 import { asyncUpdatePassword, asyncDeleteUser } from '../states/users/action';
 import './styles/userAcc-style.css';
@@ -13,6 +15,8 @@ const UserAccount = () => {
   const [oldPassword, setOldPassword] = useInput('');
   const [newPassword, setNewPassword] = useInput('');
   const [isDeleteConfirmationVisible, setDeleteConfirmationVisibility] = useState(false);
+  const [showOldPassword, setShowOldPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
 
   const updateHandler = (event) => {
     event.preventDefault();
@@ -52,20 +56,46 @@ const UserAccount = () => {
       )}
       <FaUserLock id="lock-img" className="text-8xl mx-auto mb-4" />
       <form onSubmit={updateHandler} id="formSubmit">
-        <input
-          id="pasw-input"
-          type="password"
-          placeholder="Password lama"
-          value={oldPassword}
-          onChange={(e) => setOldPassword(e.target.value)}
-        />
-        <input
-          id="pasw-input"
-          type="password"
-          placeholder="Password baru"
-          value={newPassword}
-          onChange={(e) => setNewPassword(e.target.value)}
-        />
+        <div id="pasw-input">
+          <input
+            type={showOldPassword ? 'text' : 'password'}
+            placeholder="Password lama"
+            value={oldPassword}
+            onChange={(e) => setOldPassword(e.target.value)}
+          />
+          <button
+            type="button"
+            className=""
+            onClick={() => setShowOldPassword(!showOldPassword)}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') {
+                setShowOldPassword(!showOldPassword);
+              }
+            }}
+          >
+            {showOldPassword ? <RiEyeLine /> : <BsFillEyeSlashFill />}
+          </button>
+        </div>
+        <div id="pasw-input">
+          <input
+            type={showNewPassword ? 'text' : 'password'}
+            placeholder="Password baru"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+          />
+          <button
+            type="button"
+            className=""
+            onClick={() => setShowNewPassword(!showNewPassword)}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') {
+                setShowNewPassword(!showNewPassword);
+              }
+            }}
+          >
+            {showNewPassword ? <RiEyeLine /> : <BsFillEyeSlashFill />}
+          </button>
+        </div>
         <button id="userPage-btn" type="submit">Ubah Password</button>
       </form>
       <button id="userPage-btn1" type="button" onClick={deleteHandler}>

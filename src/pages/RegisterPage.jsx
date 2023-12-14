@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
 import { FaUser, FaLock, FaEnvelope } from 'react-icons/fa';
+import { RiEyeLine } from 'react-icons/ri';
+import { BsFillEyeSlashFill } from 'react-icons/bs';
+import { useDispatch } from 'react-redux';
 import useInput from '../hooks/useInput';
 import { asyncRegisterUser } from '../states/authUser/action';
 import './styles/auth.css';
@@ -10,6 +12,7 @@ const RegisterPage = () => {
   const [email, setEmail] = useInput('');
   const [username, setUsername] = useInput('');
   const [password, setPassword] = useInput('');
+  const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -48,16 +51,28 @@ const RegisterPage = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="input-field input-field w-[100%]">
+          <div className="input-field input-field w-[100%] relative">
             <FaLock className="input-icon" />
             <input
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               placeholder="kata sandi"
               id="mytanggal"
               className="py-1"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
+            <button
+              type="button"
+              className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer"
+              onClick={() => setShowPassword(!showPassword)}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') {
+                  setShowPassword(!showPassword);
+                }
+              }}
+            >
+              {showPassword ? <RiEyeLine /> : <BsFillEyeSlashFill />}
+            </button>
           </div>
           <div id="signInContainer" className="signContainer mt-10">
             <button type="submit" id="signinBtn" className="bg-[#2845AB] w-[100%] py-2.5 rounded-full text-white hover:bg-blue-500">Daftar</button>

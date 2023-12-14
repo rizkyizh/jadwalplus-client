@@ -9,7 +9,7 @@ const CombinedComponent = () => {
           <p>
             Taklukkan Waktu, Atur Hidup
             <br />
-            dengan Lebih Muda
+            dengan Lebih Mudah
           </p>
           <p>
             Mulailah Mengatur Jadwalmu
