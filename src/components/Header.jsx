@@ -5,12 +5,12 @@ import './styles/header.css';
 const Header = () => {
   return (
     <header className="sticky-top">
-      <nav className="flex-col gap-4 lg:flex-row py-4 px-[28.8px]">
+      <nav className="flex-col gap-4 md:flex-row py-4 px-[28.8px]">
         <div className="logo">
           <img src="/image/logo.png" alt="Logo" className="logo-image" />
           <span>JadwalPlus</span>
         </div>
-        <ul>
+        <ul className="flex items-center justify-evenly gap-4 text-sm sm:text-base">
           <li className="nav-item"><Link to="/home" className="active">Home</Link></li>
           <li className="nav-item"><Link to="/about">Tentang Kami</Link></li>
           <li className="auth-box login-box"><Link to="/" className="auth-aja">Masuk</Link></li>

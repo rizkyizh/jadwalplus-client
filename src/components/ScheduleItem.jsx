@@ -55,7 +55,7 @@ const ScheduleItem = ({ schedule }) => {
         </div>
       )}
       <div className="schedule-title">
-        <h4 id="schedule-text">{schedule.schedule}</h4>
+        <h4 id="schedule-text" className="text-2xl">{schedule.schedule}</h4>
         {showFormattedDate(today) === showFormattedDate(dateTime) && (<p className="is-today">Today</p>)}
       </div>
       <div className="dateTime-container">
