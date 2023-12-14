@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint ./src --ext js,jsx",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "ci:test": "vitest --no-watch"
   },
   "dependencies": {
     "@fontsource/poppins": "^5.0.8",

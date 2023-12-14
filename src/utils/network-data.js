@@ -1,5 +1,4 @@
-// const { VITE_BASE_API_URL } = import.meta.env;
-const VITE_BASE_API_URL = 'http://localhost:5000';
+const { VITE_BASE_API_URL } = import.meta.env;
 
 const fetchWithAuth = async (url, options = {}) => {
   return fetch(url, {
