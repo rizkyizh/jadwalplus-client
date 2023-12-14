@@ -60,10 +60,12 @@
   max-height: 65px;
   transition: max-height 0.5s;
   overflow: hidden;
+  padding:10px
 }
 
-.input-icon{
-  margin-left: 16px;
+.input-icon {
+  margin-left: 10px;
+  margin-right: 10px; 
 }
 
 input {
@@ -123,10 +125,9 @@ a {
   margin-left: 6px;
   color: green;
 }
-
 .signBtn {
   width: 100%;
-  background-color: #3c00a0;
+  background-color: blue; /* Ganti dengan warna biru yang diinginkan */
   color: #fff;
   height: 40px;
   border-radius: 20px;
@@ -136,9 +137,11 @@ a {
   font-size: 1.2em;
 }
 
-.signBtn:hover{
-  background-color: #2b0567;
+.signBtn:hover {
+  background-color: #007acc; /* Ganti dengan warna biru yang diinginkan saat hover */
 }
+
+
 
 #signUpContainer {
   display: none;
@@ -187,11 +190,17 @@ a {
 
 /* Responsivitas */
 @media only screen and (max-width: 768px) {
-  .navigation-icon {
-    margin: 0 10px; /* Mengurangi margin pada layar kecil */
+  .input-field {
+    width: calc(100% - 30px); 
+    margin: 10px 15px; 
   }
 }
-
+@media only screen and (max-width: 768px) {
+  .container {
+    background-image: none; /* Menghapus gambar latar belakang */
+    background-color: #fff; /* Memberikan latar belakang putih */
+  }
+}
 /* 
   Navigation Bottom
 
@@ -200,3 +209,4 @@ a {
 #logOut-icon{
   margin-top: 10px;
 }
+
