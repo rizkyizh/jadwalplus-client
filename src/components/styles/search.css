@@ -22,12 +22,6 @@
   font-size: 1.2rem;
 }
 
-/* Gaya tambahan untuk memberi efek pada input saat di-fokus */
-.search-input:focus {
-  border: 1px solid #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
 /* Gaya tambahan untuk menangani kasus ketika hasil pencarian tidak ditemukan */
 .search-not-found {
   animation: none; /* Menonaktifkan animasi ketika hasil pencarian tidak ditemukan */
