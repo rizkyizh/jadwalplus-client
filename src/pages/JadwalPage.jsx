@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles/about.css';
-import './styles/Jadwal.css';
 
 const JadwalPage = () => {
   return (

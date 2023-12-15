@@ -24,6 +24,7 @@ const CombinedComponent = () => {
           <img
             src="./image/task1.png"
             alt="Ilustrasi JadwalPlus"
+            className="w-[100px] md:w-[150px]"
           />
           <h4 className="text-2xl font-semibold">JadwalPlus</h4>
         </div>
