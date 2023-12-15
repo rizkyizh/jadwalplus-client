@@ -4,7 +4,7 @@ import './styles/footer.css';
 const Footer = () => {
   return (
     <footer className="copyright-box">
-      <p>copy @ 2023 JadwalPlus. All rights reserved.</p>
+      <p className="text-sm sm:text-base">copy @ 2023 JadwalPlus. All rights reserved.</p>
     </footer>
   );
 };
