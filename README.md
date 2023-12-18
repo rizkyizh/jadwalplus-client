@@ -50,6 +50,8 @@ App : [JadwalPlus](https://jadwalplus-client.vercel.app/)
   ```
   VITE_BASE_API_URL='YOUR API URL'
   ```
+- Jalan kan dengan perintah
+
   ```
   npm run dev
   ```
