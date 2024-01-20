@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 /* *,
 *::before,
 *::after {
@@ -12,8 +11,15 @@
 } */
 
 body {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
+
+@media (min-width: 375px) {
+  .login-page-wrapper {
+    height: 100vh;
+  }
+}
+
 /* 
 nav{
   position: sticky;

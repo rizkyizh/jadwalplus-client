@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { FaEnvelope, FaLock } from 'react-icons/fa';
-import { RiEyeLine } from 'react-icons/ri';
-import { BsFillEyeSlashFill } from 'react-icons/bs';
-import { useDispatch } from 'react-redux';
-import useInput from '../hooks/useInput';
-import { asyncSetAuthUser } from '../states/authUser/action';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { FaEnvelope, FaLock } from "react-icons/fa";
+import { RiEyeLine } from "react-icons/ri";
+import { BsFillEyeSlashFill } from "react-icons/bs";
+import { useDispatch } from "react-redux";
+import useInput from "../hooks/useInput";
+import { asyncSetAuthUser } from "../states/authUser/action";
 // import './styles/auth.css';
 
 const LoginPage = () => {
-  const [email, setEmail] = useInput('');
-  const [password, setPassword] = useInput('');
+  const [email, setEmail] = useInput("");
+  const [password, setPassword] = useInput("");
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -18,61 +18,103 @@ const LoginPage = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     dispatch(asyncSetAuthUser({ email, password }));
-    navigate('/');
+    navigate("/");
   };
 
   return (
-    <div className="w-[100%] bg-image-auth">
-      <div className="flex flex-col justify-around bg-white w-[100%] sm:w-[448px] sm:mx-auto p-6 min-h-screen">
-        <div className="flex items-center gap-10">
-          <img src="/image/task1.png" alt="Task Icon" id="taskIcon" />
-          <h1 className="text-xl font-semibold">JadwalPlus</h1>
-        </div>
-        <h1 id="title" className="my-10 text-center text-2xl">Masuk ke JadwalPlus</h1>
-        <form onSubmit={submitHandler}>
-          <div className="input-field w-[100%]">
-            <FaEnvelope className="input-icon" />
-            <input
-              type="email"
-              placeholder="email pengguna"
-              className="py-1"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="input-field w-[100%] relative">
-            <FaLock className="input-icon" />
-            <input
-              type={showPassword ? 'text' : 'password'}
-              placeholder="Kata Sandi"
-              id="mytanggal"
-              className="py-1"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <button
-              type="button"
-              className="absolute top-1/2 right-3 transform -translate-y-1/2 cursor-pointer"
-              onClick={() => setShowPassword(!showPassword)}
-              onKeyPress={(e) => {
-                if (e.key === 'Enter') {
-                  setShowPassword(!showPassword);
-                }
-              }}
+    <div className="login-page-wrapper flex flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+        <img
+          className="mx-auto w-auto"
+          src="/image/task1.png"
+          alt="Your Company"
+        />
+        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          Masuk ke JadwalPlus
+        </h2>
+      </div>
+      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+        <form className="space-y-6" onSubmit={submitHandler}>
+          <div>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium leading-6 text-gray-900"
             >
-              {showPassword ? <RiEyeLine /> : <BsFillEyeSlashFill />}
+              Email address
+            </label>
+            <div className="mt-2">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
+                required
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
+          <div>
+            <div className="flex items-center justify-between">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium leading-6 text-gray-900"
+              >
+                Password
+              </label>
+              <div className="text-sm">
+                {/* <a
+                  href="#"
+                  className="font-semibold text-indigo-600 hover:text-indigo-500"
+                >
+                  Forgot password?
+                </a> */}
+              </div>
+            </div>
+            <div className="mt-2">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                autoComplete="current-password"
+                required
+                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+
+          <div>
+            <button
+              type="submit"
+              className="flex w-full justify-center rounded-md bg-gray-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Masuk
             </button>
           </div>
-          <div id="signInContainer" className="signContainer mt-16">
-            <button type="submit" id="signinBtn" className="bg-[#2845AB] w-[100%] py-2.5 rounded-full text-white hover:bg-blue-500">Masuk</button>
-            <section className="text-center mt-3">
-              <span>Belum memiliki akun?</span>
-              <Link to="/register" id="signUpLink">Daftar</Link>
-              <span> /</span>
-              <Link to="/">Home</Link>
-            </section>
-          </div>
         </form>
+
+        <p className="mt-10 text-center text-sm text-gray-500">
+          Belum memiliki akun??{" "}
+          <Link
+            to={"/register"}
+            className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+          >
+            Daftar
+          </Link>
+        </p>
+      </div>
+
+      <div className="my-6 text-center sm:mx-auto sm:w-full sm:max-w-sm">
+        <Link
+          to={"/"}
+          className=" whitespace-nowrap text-sm font-semibold text-sky-500 hover:text-sky-600"
+        >
+          <span aria-hidden="true">←</span> Back to Home
+        </Link>
       </div>
     </div>
   );
