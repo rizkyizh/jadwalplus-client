@@ -1,4 +1,4 @@
-.schedule-container {
+/* .schedule-container {
   background-color: #FFFFFF;
   width: 700px;
   margin: 0 auto;
@@ -94,10 +94,10 @@ button{
 #emptySchedule{
   justify-content: center;
   align-items: center;
-}
+} */
 
 /* coba ae */
-.delete-confirmation-overlay {
+/* .delete-confirmation-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -159,4 +159,4 @@ button{
 .confirmation-buttons button:hover {
   background-color: #333;
 }
-
+ */

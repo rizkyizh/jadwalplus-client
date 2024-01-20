@@ -6,7 +6,7 @@ import { BsFillEyeSlashFill } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
 import useInput from '../hooks/useInput';
 import { asyncRegisterUser } from '../states/authUser/action';
-import './styles/auth.css';
+// import './styles/auth.css';
 
 const RegisterPage = () => {
   const [email, setEmail] = useInput('');

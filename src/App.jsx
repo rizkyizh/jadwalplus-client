@@ -46,7 +46,7 @@ const App = () => {
     return (
       <>
         <Loading />
-        <div className="min-height-100">
+        <div className="container mx-auto">
           {path !== '/register' && path !== '/login' && <Header />}
           <main>
             <Routes>
@@ -66,7 +66,7 @@ const App = () => {
   return (
     <>
       <Loading />
-      <div className="min-height-100 bg-[#F3EEEA]">
+      <div className="bg-[#F3EEEA]">
         <NavigationTop authUser={authUser} />
         <Routes>
           <Route path="/" element={<Beranda />} />

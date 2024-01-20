@@ -1,4 +1,4 @@
-.search-container {
+/* .search-container {
   margin: 0 auto;
   background-color: white;
   display: flex;
@@ -8,21 +8,22 @@
   justify-content: center;
   border-radius: 999px;
   border: 1px solid #333;
-}
-
+} */
+/* 
 .search-input {
-  padding: 0.8rem; /* Sesuaikan proporsi padding agar ukuran tetap */
+  padding: 0.8rem; 
   font-size: 1rem;
   width: 100%;
   border: none;
   outline: none;
-}
+} */
 
-.search-icon {
+/* .search-icon {
   font-size: 1.2rem;
-}
+} */
 
 /* Gaya tambahan untuk menangani kasus ketika hasil pencarian tidak ditemukan */
-.search-not-found {
-  animation: none; /* Menonaktifkan animasi ketika hasil pencarian tidak ditemukan */
-}
+/* .search-not-found {
+  animation: none; 
+} */
+/* Menonaktifkan animasi ketika hasil pencarian tidak ditemukan */
