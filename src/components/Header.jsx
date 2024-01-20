@@ -21,7 +21,7 @@ const Header = () => {
         aria-label="Global"
       >
         <div className="flex lg:flex-1 items-center">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               className="h-8 w-auto mr-2 rounded-full"
@@ -44,19 +44,21 @@ const Header = () => {
         <div className="hidden lg:flex lg:gap-x-12 items-center">
           {navigation.map((item) =>
             item.name == "Daftar" ? (
-              <a
+              <Link
                 key={item.name}
                 className="px-2 py-1 text-sm font-semibold leading-6 text-white bg-black rounded hover:text-black hover:bg-gray-300"
+                to={item.endpoint}
               >
-                <Link to={item.endpoint}>{item.name}</Link>
-              </a>
+                {item.name}
+              </Link>
             ) : (
-              <a
+              <Link
                 key={item.name}
                 className="text-sm font-semibold leading-6 text-gray-900"
+                to={item.endpoint}
               >
-                <Link to={item.endpoint}>{item.name}</Link>
-              </a>
+                {item.name}
+              </Link>
             )
           )}
         </div>
@@ -92,13 +94,13 @@ const Header = () => {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 {navigation.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    to={item.endpoint}
                   >
-                    <Link to={item.endpoint}>{item.name}</Link>
-                  </a>
+                    {item.name}
+                  </Link>
                 ))}
               </div>
             </div>
