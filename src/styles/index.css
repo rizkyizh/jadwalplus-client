@@ -20,6 +20,11 @@ body {
   }
 }
 
+.social-icons svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* 
 nav{
   position: sticky;
